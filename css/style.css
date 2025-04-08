@@ -1,0 +1,677 @@
+/* Selector/estilos universales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}   
+
+.container {
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #4e204b;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #4e204b;
+}
+
+
+.img-inicio {
+    width: 100%;
+}
+
+
+h1 {
+    text-align: center;
+    padding: 5%;
+    font-family: "Orbitron", sans-serif;
+    
+}
+
+
+h2 { 
+    font-family: "Almendra SC", serif;
+    color: #6a6b83; 
+    font-size: 2em;
+}
+
+.p-pages {
+    margin-top: 10px;
+    font-family: monospace;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+
+/* ------------------------------------------------------------------------------ */
+
+
+/* -------------NAVBAR------------ */
+
+.logo {
+    width: 65px; 
+    border-radius: 30%;
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    text-align: center;
+    background-color: #d4c3d2;
+    font-size: 0.7em;
+    padding: 7px;
+    
+}
+
+nav {
+    top: 0;
+    position: sticky;
+    background-color: rgb(253, 240, 255);
+}
+
+nav ul {
+    font-family: "Turret Road", sans-serif;
+    font-weight: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 0.5%; 
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.left li {
+    padding-left: 10%;
+}
+.right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.right li {
+    margin: 10px;
+    
+}
+
+/* ----------------Footer------------------ */
+footer{ 
+    background-color: rgb(193, 175, 194);
+    font-size: 20px;
+    text-align: center;
+    grid-area: footer;
+    
+}
+
+footer ul {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer{
+    padding: 20px;
+    font-family: "Turret Road", sans-serif;
+    font-weight: 500;
+}
+
+.div-redes{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.redes{
+    border-radius: 10px;
+    width: 50px;
+    margin-inline: 30px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+
+}
+
+.div-p {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* -------------------------INDEX------------------------- */
+
+.contenedor {
+    height: 100vh;
+}
+
+.sect-dest {
+    background-color: rgb(250, 215, 250);
+    text-align: center;
+}
+
+.sect-dest h2 {
+    padding: 10px;
+}
+
+.destacados {
+    display: grid;
+    grid-template-areas: 
+    "img1  img2   img3   img4"
+    "img5  img6   img7   img8";
+    grid-template-columns:23% 23% 23% 23%;
+    grid-template-rows:  50% 50%;
+    justify-content: center;
+}
+
+#img1{grid-area: img1; width: 100%; padding: 10px;}
+#img2{grid-area: img2; width: 100%; padding: 10px;}
+#img3{grid-area: img3; width: 100%; padding: 10px;}
+#img4{grid-area: img4; width: 100%; padding: 10px;}
+#img5{grid-area: img5; width: 100%; padding: 10px;}
+#img6{grid-area: img6; width: 100%; padding: 10px;}
+#img7{grid-area: img7; width: 100%; padding: 10px;}
+#img8{grid-area: img8; width: 100%; padding: 10px;}
+
+
+
+
+/* --------------------------SHOP----------------------------*/
+.enlaces {
+    display: grid;
+    grid-template-areas: 
+    "vestidos  sinmangas   sinmangas"
+    "vestidos  sinmangas   sinmangas"
+    "vestidos  tops        faldas";
+    grid-template-columns:35% 30% 30% ;
+    grid-template-rows:  20% 31.5% 50%;
+    justify-content: center;
+
+}
+
+.enlaces a:hover{
+    opacity: 50%;
+}
+
+.img-enlaces {
+    padding: 10px;
+    width: 100%;
+}
+
+#vestidos {
+    grid-area: vestidos;
+}
+#sinmangas {
+    grid-area: sinmangas;
+}
+#tops {
+    grid-area: tops;
+}
+#faldas {
+    grid-area: faldas;
+}
+/* -----------------------------------------VESTIDOS------------------------------------------- */
+
+/*
+.img-cambio1:hover{
+    
+}
+.img-cambio2:hover{
+    
+}
+.img-cambio3:hover{
+    
+}
+*/
+
+.vestidos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.vestidos a img {
+    width: 25em;
+}
+
+/* -------------------------DARCY LENA SNOW------------------------- */
+
+button:hover {
+    background-color: white;
+    border: solid black;
+    color: #000000;
+}
+
+button {    
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Jura", sans-serif;
+    letter-spacing: 5px;
+}
+
+.vest{
+    margin-top: 70px;
+    display: grid;
+    grid-template-areas: 
+    "img  aside "
+    "img  aside "
+    "img  aside   ";
+    grid-template-columns: 60% 40%;
+    grid-template-rows:  33.1% 33.5% 33.3%;
+    
+}
+
+.vest div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.vest div img{
+    width: 95%;
+    grid-area: img;
+}
+
+.aside-vest {
+    padding: 0 10%;
+    background-color: #dadaf0;
+    grid-area: aside;
+    line-height: 2em;
+}
+
+.h1-vest {
+    font-size: 2em;
+}
+
+.pvest {
+    font-family: "Metamorphous", serif;
+}
+
+/* -------------------------ABOUT US------------------------- */
+
+.about {
+    font-family: "Metamorphous", serif;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 30px;
+}
+
+
+.img-about {
+    width: 100%;
+}
+
+/* -------------------------CONTACT------------------------- */
+
+.imgatito {
+    margin-left: 20px;
+    padding: 10px;
+    width: 50%;
+    height: 70%;
+}
+
+.parrafo {
+    color: rgb(186, 96, 194);
+    font-size: 20px;
+}
+
+.right2 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.right2 form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.main-contact {
+    margin-top: 5%;
+    justify-content: center;
+    display: flex;
+}
+
+
+/* -------------------------DEVOLUCION------------------------- */
+
+.devolucion {
+   margin-left: 5%;
+   font-size: 1.3em;
+}
+
+
+
+
+
+
+/* ----------------------------------------------------MEDIA QUERY---------------------------------------------------- */
+/* --------------index--------------- */
+/*-------------------------TABLET---------------------------*/
+@media screen and (max-width:768px) {
+
+    #grid-index {
+        
+        display: grid;
+        grid-template-areas: 
+        " header   header     header  "
+        " nav      sec-ind    sec-ind  "
+        " nav      sec-des   sec-des  "
+        " nav      sec-des   sec-des  "
+        " nav      footer     footer  ";
+        grid-template-columns:15% 40% 45% ;
+        grid-template-rows:  2% 18% 30% 35% 25%;
+
+    }
+
+    .logo {margin-top: 20px;}
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 15px;
+        position: relative;
+    }
+
+    .left li{
+        padding: 10px;
+    }
+    .left {
+        
+        display: flex;
+        flex-direction: column;
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {grid-area: header;}
+    nav {grid-area: nav;}
+    .section-index {grid-area: sec-ind;}
+    .sect-dest {grid-area: sec-des;}
+    footer {grid-area: footer;}
+
+
+    .destacados {
+        display: grid;
+        grid-template-areas: 
+        "img1  img2 img3"   
+        "img4  img5  img6"   
+        "img7  img5 img8";
+        grid-template-columns:30% 40% 30%;
+        grid-template-rows: 40% 40% 30%;
+        justify-content: center;
+    }
+    
+
+}
+
+
+/*-------------------------MOBILE L---------------------------*/
+@media screen and (max-width:425px) {
+    #grid-index {
+        
+        display: grid;
+        grid-template-areas: 
+        " header    header     header  "
+        " nav       nav        nav    "
+        " sec-ind   sec-ind    sec-ind  "
+        " sec-des   sec-des    sec-des  "
+        " footer    footer     footer  ";
+        grid-template-columns: 20% 40% 40% ;
+        grid-template-rows:  1% 4% 15% 62% 20%;
+
+        
+    }
+    
+    .redes {
+        margin-top: 20px;
+    }
+    footer a {
+        font-size: 15px;
+    }
+
+    header {
+        font-size: 7px;
+    }
+
+    nav {
+        position: sticky;
+    }
+    
+    .left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .right {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0.5%; 
+        justify-content: space-between;
+    }
+
+    .logo {
+      width: 40px;  
+      margin: 0;
+    }
+
+    .destacados {
+        display: grid;
+        grid-template-areas: 
+        "img1  img2 "   
+        "img3  img4 " 
+        "img5  img6"   
+        "img7  img8";
+        grid-template-columns:45% 45%;
+        grid-template-rows: 25% 25% 25% 25%;
+        justify-content: center;
+    }
+
+
+}
+
+/* --------------shop--------------- */
+/*-------------------------TABLET---------------------------*/
+@media screen and (max-width:768px) {
+
+    #grid-shop {
+        
+        display: grid;
+        grid-template-areas: 
+        " header   header      "
+        " nav      contenedor-collec    "
+        " nav      contenedor-collec  "
+        " nav      footer   ";
+        grid-template-columns:16% 85% ;
+        grid-template-rows:  2% 18% 55% 36%;
+
+    }
+
+    .contenedor-collec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .enlaces {
+        display: grid;
+        grid-template-areas: 
+        "sinmangas   sinmangas"
+        "tops        faldas"
+        "vestidos    vestidos";
+        grid-template-columns:35% 35% ;
+        grid-template-rows:  20% 18% 62%;
+        justify-content: center;
+
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+
+}
+/*-------------------------MOBILE L---------------------------*/
+@media screen and (max-width:425px) {
+    #grid-shop {
+        
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+
+    .enlaces {
+        display: grid;
+        grid-template-areas: 
+        "sinmangas   sinmangas"
+        "tops        faldas"
+        "vestidos    vestidos";
+        grid-template-columns:40% 40% ;
+        grid-template-rows:  20% 18% 62%;
+
+    }
+}
+
+
+/* --------------vestidos-sin mangas-basicos-faldas--------------- */
+/*-------------------------TABLET---------------------------*/
+@media screen and (max-width:768px) {
+    #grid-collections {
+        display: grid;
+        grid-template-areas: 
+        "nav header  header"
+        "nav cont    cont"
+        "nav footer  footer";
+        grid-template-columns: 15% 42% 43%;
+        grid-template-rows: 2% 80% 30%;
+    }
+    .contenedor-vestidos {grid-area: cont;}
+    .vestidos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .vestidos a img {
+        width: 19em;
+    }
+
+}
+
+/*-------------------------MOBILE L---------------------------*/
+@media screen and (max-width:425px) {
+    #grid-collections {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "cont cont"
+        "footer footer";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 2% 5% 75%;
+    }
+}
+
+
+/* --------------resto de las paginas--------------- */
+/*-------------------------TABLET---------------------------*/
+@media screen and (max-width:768px) {
+    .grid-footer {
+        display: grid;
+        grid-template-areas: 
+        "nav header  header"
+        "nav main    main"
+        "nav footer  footer";
+        grid-template-columns: 15% 42% 43%;
+        grid-template-rows: 2% 80% 25%;
+    }
+    .grid-footer-contact {
+        display: grid;
+        grid-template-areas: 
+        "nav header  header"
+        "nav main    main"
+        "nav footer  footer";
+        grid-template-columns: 15% 42% 43%;
+        grid-template-rows: 3% 60% 40%;
+    }
+    main {grid-area: main;}
+    .main-contact {margin: 0; }
+    .imgatito {
+        width: 50%;
+        height: 60%;
+    }
+}
+
+/*-------------------------MOBILE L--------------------------*/
+@media screen and (max-width:425px) {
+    .grid-footer {
+        display: grid;
+        grid-template-areas: 
+        "header header  "
+        "nav nav   "
+        "main main"
+        " footer  footer";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 2% 4% 1fr 20%;
+    }
+    .grid-footer-contact {
+        display: grid;
+        grid-template-areas: 
+        "header header  "
+        "nav nav   "
+        "main main"
+        " footer  footer";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 2% 8% 80% 40%;
+    }
+
+    .main-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .right2{
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
