@@ -17,12 +17,12 @@ body {
 
 a {
     text-decoration: none;
-    color: #4e204b;
+    color: #f5a5cd;
+    
 }
 
 a:visited {
     text-decoration: none;
-    color: #4e204b;
 }
 
 
@@ -35,6 +35,7 @@ h1 {
     text-align: center;
     padding: 5%;
     font-family: "Orbitron", sans-serif;
+    font-size: 1.5em;
     
 }
 
@@ -56,7 +57,7 @@ h2 {
 /* ------------------------------------------------------------------------------ */
 
 
-/* -------------NAVBAR------------ */
+/* -------------NAVBAR y HEADER------------ */
 
 .logo {
     width: 65px; 
@@ -70,15 +71,23 @@ li {
 header {
     text-align: center;
     background-color: #d4c3d2;
-    font-size: 0.7em;
-    padding: 7px;
-    
+
+}
+
+header h3 {
+    font-size: 0.9em;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
 }
 
 nav {
+    position: sticky !important;
     top: 0;
-    position: sticky;
+    z-index: 999;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
     background-color: rgb(253, 240, 255);
+    margin-bottom: 10px;
 }
 
 nav ul {
@@ -88,8 +97,8 @@ nav ul {
     flex-direction: row;
     align-items: center;
     font-size: 1.5em;
-    padding: 0.5%; 
     justify-content: space-between;
+    margin: 0;
 }
 
 .left {
@@ -104,10 +113,11 @@ nav ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-.right li {
-    margin: 10px;
     
+}
+
+.right p {
+    margin: 0;
 }
 
 /* ----------------Footer------------------ */
@@ -116,7 +126,7 @@ footer{
     font-size: 20px;
     text-align: center;
     grid-area: footer;
-    
+    background-color: #000000;
 }
 
 footer ul {
@@ -125,13 +135,20 @@ footer ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
-
 
 .footer{
     padding: 20px;
     font-family: "Turret Road", sans-serif;
     font-weight: 500;
+}
+
+.footer a:hover {
+    color: #e644d8;
+    border: solid rgb(104, 57, 98);
+    padding: 10px;
+    border-radius: 5%;
 }
 
 .div-redes{
@@ -152,6 +169,7 @@ footer ul {
 .div-p {
     display: flex;
     justify-content: space-between;
+    color: #d4c3d2;
 }
 
 /* -------------------------INDEX------------------------- */
@@ -163,6 +181,7 @@ footer ul {
 .sect-dest {
     background-color: rgb(250, 215, 250);
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .sect-dest h2 {
@@ -178,6 +197,12 @@ footer ul {
     grid-template-rows:  50% 50%;
     justify-content: center;
 }
+.imgs:hover {
+    transform: scale(1.09);
+}
+
+
+
 
 #img1{grid-area: img1; width: 100%; padding: 10px;}
 #img2{grid-area: img2; width: 100%; padding: 10px;}
@@ -190,7 +215,6 @@ footer ul {
 
 
 
-
 /* --------------------------SHOP----------------------------*/
 .enlaces {
     display: grid;
@@ -199,18 +223,26 @@ footer ul {
     "vestidos  sinmangas   sinmangas"
     "vestidos  tops        faldas";
     grid-template-columns:35% 30% 30% ;
-    grid-template-rows:  20% 31.5% 50%;
+    grid-template-rows:  20% 31.5% 48%;
     justify-content: center;
+    
 
 }
-
-.enlaces a:hover{
-    opacity: 50%;
+.enlaces a {
+    overflow: hidden;
+}
+.img-enlaces:hover{
+    transform: scale(1.2);
+    filter: brightness(50%);
 }
 
 .img-enlaces {
     padding: 10px;
     width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    object-fit: cover;
+    
 }
 
 #vestidos {
@@ -225,27 +257,40 @@ footer ul {
 #faldas {
     grid-area: faldas;
 }
-/* -----------------------------------------VESTIDOS------------------------------------------- */
+/* -----------------------------------------COLLECTIONS------------------------------------------- */
 
-/*
+.img-cambio1{
+    background-image: url(../img/vd-1.webp);
+    grid-area: a;
+}
+.img-cambio2{
+    background-image: url(../img/vl-1.webp);
+    grid-area: b;
+}
+.img-cambio3{
+    background-image: url(../img/vs-1.webp);
+    grid-area: c;
+}
 .img-cambio1:hover{
-    
+    background-image: url(../img/vd-1cambio.webp);
 }
 .img-cambio2:hover{
-    
+    background-image: url(../img/vl-1cambio.webp);
 }
 .img-cambio3:hover{
-    
+    background-image: url(../img/vs-1cambio.webp);
 }
-*/
 
 .vestidos {
-    display: flex;
+    height: 800px;
+    display: grid;
     justify-content: space-around;
-}
-
-.vestidos a img {
-    width: 25em;
+    grid-template-areas: 
+    "a b c "
+    "a b c "
+    "a b c ";
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 40% 15% 15% ;
 }
 
 /* -------------------------DARCY LENA SNOW------------------------- */
@@ -264,7 +309,6 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-family: "Jura", sans-serif;
-    letter-spacing: 5px;
 }
 
 .vest{
@@ -426,8 +470,7 @@ button {
         grid-template-rows: 40% 40% 30%;
         justify-content: center;
     }
-    
-
+ 
 }
 
 
@@ -443,7 +486,7 @@ button {
         " sec-des   sec-des    sec-des  "
         " footer    footer     footer  ";
         grid-template-columns: 20% 40% 40% ;
-        grid-template-rows:  1% 4% 15% 62% 20%;
+        grid-template-rows:  1% 5% 15% 62% 23%;
 
         
     }
@@ -512,8 +555,8 @@ button {
         " nav      contenedor-collec    "
         " nav      contenedor-collec  "
         " nav      footer   ";
-        grid-template-columns:16% 85% ;
-        grid-template-rows:  2% 18% 55% 36%;
+        grid-template-columns:15% 84% ;
+        grid-template-rows:  2% 18% 60% 25%;
 
     }
 
@@ -529,7 +572,7 @@ button {
         "sinmangas   sinmangas"
         "tops        faldas"
         "vestidos    vestidos";
-        grid-template-columns:35% 35% ;
+        grid-template-columns:50% 50% ;
         grid-template-rows:  20% 18% 62%;
         justify-content: center;
 
@@ -539,6 +582,7 @@ button {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding: 0;
         
     }
 
@@ -607,7 +651,7 @@ button {
         "cont cont"
         "footer footer";
         grid-template-columns: 50% 50%;
-        grid-template-rows: 2% 5% 75%;
+        grid-template-rows: 2% 6% 90% 30%;
     }
 }
 

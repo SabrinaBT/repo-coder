@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,21 +15,71 @@
 <body>
     <header>
         <h3>ENVÍOS GRATIS EN COMPRAS SUPERIORES A $170.000</h3>
-      </header>
-      <nav>
-          <ul>
-              <div class="left">
-                  <li> <a href="../index.html"><img class="logo" src="../img/logo.gif" alt="Logo de la página"></a></li>
-                  <li> <a href="shop.html">SHOP</a></li>
-                  <li> <a href="aboutus.html">BRAND</a></li>
-              </div>
-              <div class="right">
-                  <li> <a href="ingresa.html">Ingresá </a></li> 
-                  <p>/</p>
-                  <li><a href="registrate.html">Registrate</a></li>
-              </div>
-          </ul>
-      </nav>
+    </header>
+    <nav>
+        <ul>
+            <div class="left">
+                <li> <a href="../index.html"><img class="logo" src="../img/logo.gif" alt="Logo de la página"></a></li>
+                <li> <a href="shop.html">SHOP</a></li>
+                <li> <a href="aboutus.html">BRAND</a></li>
+            </div>
+            <div class="right">
+                <li>
+                    <button class="btn btn-md clase-boton" data-bs-toggle="modal" data-bs-target="#mi-modal-1">Ingresá </button>
+                    <div class="modal fade" id="mi-modal-1" tabindex="-1" aria-hidden="true" aria-labelledby="label-modal-1" data-bs-backdrop="static">
+
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <h5 class="modal-title">titulo modal</h5>
+                                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Acepto</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                     
+                </li> 
+
+                <p>/</p>
+
+                <li>
+                    <button class="btn btn-md" data-bs-toggle="modal" data-bs-target="#mi-modal-2">Registrate </button>
+                    <div class="modal fade" id="mi-modal-2" tabindex="-1" aria-hidden="true" aria-labelledby="label-modal-2">
+
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <h5 class="modal-title">titulo modal</h5>
+                                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1>hola</h1>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Acepto</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                     
+                </li> 
+            </div>
+        </ul>
+    </nav>
 
 
     <section>
@@ -78,5 +129,6 @@
                 <p>© 2025, Copyright Kosmos.</p> <p>Todos los derechos reservados.</p>
             </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>
