@@ -2,8 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;    
 }
 
 body {
@@ -17,8 +16,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #f5a5cd;
-    
+    color: #f5a5cd;    
 }
 
 a:visited {
