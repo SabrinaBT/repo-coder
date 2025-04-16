@@ -24,9 +24,6 @@ a:visited {
 }
 
 
-.img-inicio {
-    width: 100%;
-}
 
 
 h1 {
@@ -112,7 +109,7 @@ nav ul {
     flex-direction: row;
     align-items: center;
     
-}
+} 
 
 .right p {
     margin: 0;
@@ -133,7 +130,6 @@ footer{
 }
 
 footer ul {
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,9 +172,8 @@ footer ul {
 }
 
 /* -------------------------INDEX------------------------- */
-
-.contenedor {
-    height: 100vh;
+.img-inicio {
+    width: 100%;
 }
 
 .sect-dest {
@@ -555,7 +550,6 @@ button {
 @media screen and (max-width:768px) {
 
     #grid-shop {
-        
         display: grid;
         grid-template-areas: 
         " header   header      "
@@ -597,19 +591,15 @@ button {
 /*-------------------------MOBILE L---------------------------*/
 @media screen and (max-width:425px) {
     #grid-shop {
-        
         display: flex;
         flex-direction: column;
-
     }
 
     nav ul {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        
+        justify-content: space-between; 
     }
-
 
     .enlaces {
         display: grid;
@@ -682,13 +672,16 @@ button {
         "nav main    main"
         "nav footer  footer";
         grid-template-columns: 15% 42% 43%;
-        grid-template-rows: 3% 60% 40%;
+        grid-template-rows: 3% 65% 42%;
     }
     main {grid-area: main;}
     .main-contact {margin: 0; }
     .imgatito {
         width: 50%;
         height: 60%;
+    }
+    footer ul {
+        padding: 0;
     }
 }
 

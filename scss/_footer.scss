@@ -1,0 +1,47 @@
+
+footer{ 
+    background-color: rgb(193, 175, 194);
+    font-size: 20px;
+    text-align: center;
+    grid-area: footer;
+    background-color: #000000;
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .footer{
+            padding: 20px;
+            font-family: "Turret Road", sans-serif;
+            font-weight: 500;
+            a:hover {
+                color: #e644d8;
+                border: solid rgb(104, 57, 98);
+                padding: 10px;
+                border-radius: 5%;
+            }
+          
+        }
+    }
+    .div-redes{
+        display: flex;
+        justify-content: space-around;
+        .redes{
+            border-radius: 10px;
+            width: 50px;
+            margin-inline: 30px;
+            margin-top: 80px;
+            margin-bottom: 30px;
+            
+        }
+    }
+    .div-p {
+        display: flex;
+        justify-content: space-between;
+        color: #d4c3d2;
+    }
+}
+
+
+
+

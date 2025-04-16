@@ -1,0 +1,43 @@
+.enlaces {
+    display: grid;
+    grid-template-areas: 
+    "vestidos  sinmangas   sinmangas"
+    "vestidos  sinmangas   sinmangas"
+    "vestidos  tops        faldas";
+    grid-template-columns:35% 30% 30% ;
+    grid-template-rows:  20% 31.5% 48%;
+    justify-content: center;
+    a {
+        overflow: hidden;
+        #vestidos {
+            grid-area: vestidos;
+        }
+        #sinmangas {
+            grid-area: sinmangas;
+        }
+        #tops {
+            grid-area: tops;
+        }
+        #faldas {
+            grid-area: faldas;
+        }
+        .img-enlaces {
+            padding: 10px;
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+            object-fit: cover;
+        }
+        .img-enlaces:hover{
+            transform: scale(1.2);
+            filter: brightness(50%);
+        }
+    }
+}
+
+
+
+
+
+
+
