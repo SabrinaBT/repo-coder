@@ -1,13 +1,11 @@
 .enlaces {
     display: grid;
-    grid-template-areas: 
-    "vestidos  sinmangas   sinmangas"
-    "vestidos  sinmangas   sinmangas"
-    "vestidos  tops        faldas";
-    grid-template-columns:35% 30% 30% ;
-    grid-template-rows:  20% 31.5% 48%;
-    justify-content: center;
-    a {
+        grid-template-areas: 
+        "vestidos sinmangas sinmangas"
+        "vestidos basicos faldas";
+        grid-template-columns:25% 25% 25%;
+        grid-template-rows:  50% 50%;
+        justify-content: center;
         overflow: hidden;
         #vestidos {
             grid-area: vestidos;
@@ -15,8 +13,8 @@
         #sinmangas {
             grid-area: sinmangas;
         }
-        #tops {
-            grid-area: tops;
+        #basicos {
+            grid-area: basicos;
         }
         #faldas {
             grid-area: faldas;
@@ -32,11 +30,7 @@
             transform: scale(1.2);
             filter: brightness(50%);
         }
-    }
 }
-
-
-
 
 
 

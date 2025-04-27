@@ -12,13 +12,14 @@
         " nav      sec-des   sec-des  "
         " nav      footer     footer  ";
         grid-template-columns:15% 40% 45% ;
-        grid-template-rows:  2% 12% 30% 50% 25%;
+        grid-template-rows:  1% 12% 30% 50% 25%;
         header {
             grid-area: header;
         }
         nav {
             grid-area: nav;
             ul {
+                padding: 0;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -154,15 +155,37 @@
         " nav      footer   ";
         grid-template-columns:15% 85% ;
         grid-template-rows:  2% 18% 60% 25%;
+        header {
+            grid-area: header;
+        }
         nav {
+            grid-area: nav;
+           
             ul {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: center;
+                font-size: 15px;
+                position: relative; 
                 padding: 0;
+                .left {
+                    display: flex;
+                    flex-direction: column;
+                    li{
+                        padding: 10px;
+                        .logo {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+                .right{
+                    display: flex;
+                    flex-direction: column;
+                }
             }
         }
         .contenedor-collec {
+            grid-area: contenedor-collec;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -170,14 +193,19 @@
                 display: grid;
                 grid-template-areas: 
                 "sinmangas   sinmangas"
-                "tops        faldas"
+                "basicos        faldas"
                 "vestidos    vestidos";
-                grid-template-columns:50% 50% ;
-                grid-template-rows:  20% 18% 62%;
+                grid-template-columns:45% 45% ;
+                grid-template-rows:  20% 20% 50%;
                 justify-content: center;
+
             }
         }
+        footer {
+            grid-area: footer;
+        }
     }
+    
 }
 
 /*-------------------------MOBILE L---------------------------*/
@@ -200,45 +228,161 @@
 }
 
 
-/* --------------vestidos-sin mangas-basicos-faldas--------------- */
+/* --------------vestidos--------------- */
 /*-------------------------TABLET---------------------------*/
 @media screen and (max-width:768px) {
     #grid-collections {
         display: grid;
         grid-template-areas: 
-        "nav header "
+        "header header "
         "nav cont  "
         "nav footer  ";
         grid-template-columns: 15%  85%;
-        grid-template-rows: 2% 120% 30%;
+        grid-template-rows: 2% 180% 30%;
         header {
+            grid-area: header;
             font-size: 12px;
         }
-        .left {
-            font-size: 12px;
-            .logo {
-                width: 45px;  
-            }
-        }
-        .btn {
-            font-size: 12px;
-        }
-        .contenedor-vestidos {
-            grid-area: cont;
-            .vestidos {
+        nav {
+            grid-area: nav;
+            ul {
+                padding: 0;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                .left {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 12px;
+                    li{
+                        padding: 10px;
+                        .logo {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+                .right{
+                    display: flex;
+                    flex-direction: column;
+                }
+                .btn {
+                    font-size: 12px;
+                }
             }
         }
         
+        .contenedor-vestidos {
+            grid-area: cont;
+          
+            h1 {
+              text-align: center;
+              margin-bottom: 2rem;
+            }
+          
+            .vestidos {
+              display: flex;              
+              flex-direction: column;     
+              align-items: center;       
+              gap: 20px;                  
+          
+              a {
+                display: block;
+                width: 90%;               
+                aspect-ratio: 3 / 4;      
+                background-size: cover;   
+                background-position: center;
+                transition: background-image 0.3s ease;
+              }
+          
+              .img-cambio1 {
+                background-image: url(../img/vd-1.webp);
+                &:hover {
+                  background-image: url(../img/vd-1cambio.webp);
+                }
+              }
+          
+              .img-cambio2 {
+                background-image: url(../img/vl-1.webp);
+                &:hover {
+                  background-image: url(../img/vl-1cambio.webp);
+                }
+              }
+          
+              .img-cambio3 {
+                background-image: url(../img/vs-1.webp);
+                &:hover {
+                  background-image: url(../img/vs-1cambio.webp);
+                }
+              }
+            }
+        }
+          
     }
-    /*
-    .vestidos a img {
-        width: 340px;
-    }
-    */
 }
+/*--------------sin mangas--------------*/
+/*-------------------------TABLET---------------------------*/
+@media screen and (max-width: 768px) {
+    .contenedor-vestidos {
+      .sinmangas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+  
+        a {
+          display: block;
+          width: 90%;
+          aspect-ratio: 3 / 4; 
+          background-size: cover;
+          background-position: center;
+          transition: background-image 0.3s ease;
+        }
+      }
+    }
+  }
+
+/*--------------basicos--------------*/
+/*-------------------------TABLET---------------------------*/
+@media screen and (max-width: 768px) {
+    .contenedor-vestidos {
+      .basicos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+  
+        a {
+          display: block;
+          width: 90%;
+          aspect-ratio: 3 / 4; 
+          background-size: cover;
+          background-position: center;
+          transition: background-image 0.3s ease;
+        }
+      }
+    }
+  }
+
+  /*--------------faldas--------------*/
+/*-------------------------TABLET---------------------------*/
+@media screen and (max-width: 768px) {
+    .contenedor-vestidos {
+      .faldas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+  
+        a {
+          display: block;
+          width: 90%;
+          aspect-ratio: 3 / 4; 
+          background-size: cover;
+          background-position: center;
+          transition: background-image 0.3s ease;
+        }
+      }
+    }
+  }
 
 /*-------------------------MOBILE L---------------------------*/
 @media screen and (max-width:425px) {
@@ -266,6 +410,34 @@
         "nav footer  footer";
         grid-template-columns: 15% 42% 43%;
         grid-template-rows: 2% 80% 25%;
+        header {
+            grid-area: header;
+        }
+        nav {
+            grid-area: nav;
+            ul {
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 15px;
+                position: relative;
+                .left {
+                    display: flex;
+                    flex-direction: column;
+                    li{
+                        padding: 10px;
+                        .logo {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+                .right{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
         main {
             grid-area: main;
         }
@@ -278,15 +450,46 @@
         "nav footer  footer";
         grid-template-columns: 15% 42% 43%;
         grid-template-rows: 3% 65% 42%;
+        header {
+            grid-area: header;
+        }
+        nav {
+            grid-area: nav;
+            ul {
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 15px;
+                position: relative;
+                .left {
+                    display: flex;
+                    flex-direction: column;
+                    li{
+                        padding: 10px;
+                        .logo {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+                .right{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
         .main-contact {
-            margin: 0; 
+           display: flex;
+           flex-direction: column;
+           align-items: center;
             .imgatito {
-                width: 50%;
-                height: 60%;
+                width: 100%;
+                height: 100%;
             }
         }
     }
     footer {
+        grid-area: footer;
         ul {
             padding: 0;
         }
@@ -326,3 +529,6 @@
         }
     }     
 }
+
+
+

@@ -7,27 +7,155 @@
     "a b c "
     "a b c ";
     grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 40% 15% 15% ;
-    .img-cambio1{
-        background-image: url(../img/vd-1.webp);
-        grid-area: a;
-    }
-    .img-cambio2{
-        background-image: url(../img/vl-1.webp);
-        grid-area: b;
-    }
-    .img-cambio3{
-        background-image: url(../img/vs-1.webp);
-        grid-area: c;
-    }
-    .img-cambio1:hover{
-        background-image: url(../img/vd-1cambio.webp);
-    }
-    .img-cambio2:hover{
-        background-image: url(../img/vl-1cambio.webp);
-    }
-    .img-cambio3:hover{
-        background-image: url(../img/vs-1cambio.webp);
-    }
+    grid-template-rows: 40% 15% 15% ; 
+
+    a {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: block;
+        .img-cambio1{
+            background-image: url(../img/vd-1.webp);
+            grid-area: a;
+        }
+        .img-cambio2{
+            background-image: url(../img/vl-1.webp);
+            grid-area: b;
+        }
+        .img-cambio3{
+            background-image: url(../img/vs-1.webp);
+            grid-area: c;
+        }
+        .img-cambio1:hover{
+            background-image: url(../img/vd-1cambio.webp);
+        }
+        .img-cambio2:hover{
+            background-image: url(../img/vl-1cambio.webp);
+        }
+        .img-cambio3:hover{
+            background-image: url(../img/vs-1cambio.webp);
+        }
+    } 
 }
 
+.sinmangas {
+    height: 800px;
+    display: grid;
+    justify-content: space-around;
+    grid-template-areas: 
+    "a2 b2 c2 "
+    "a2 b2 c2 "
+    "a2 b2 c2 ";
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 40% 15% 15% ; 
+    a {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: block;
+    }
+        .img2-cambio1{
+            background-image: url(../img/ta2-1.webp);
+            grid-area: a2;
+        }
+        .img2-cambio2{
+            background-image: url(../img/tn-1.webp);
+            grid-area: b2;
+        }
+        .img2-cambio3{
+            background-image: url(../img/tr-1.webp);
+            grid-area: c2;
+        }
+        .img2-cambio1:hover{
+            background-image: url(../img/ta2-1cambio.webp);
+        }
+        .img2-cambio2:hover{
+            background-image: url(../img/tn-1cambio.png);
+        }
+        .img2-cambio3:hover{
+            background-image: url(../img/tr-1cambio.png);
+        }
+    
+}
+
+.basicos {
+    height: 800px;
+    display: grid;
+    justify-content: space-around;
+    grid-template-areas: 
+    "a3 b3 c3 "
+    "a3 b3 c3 "
+    "a3 b3 c3 ";
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 40% 15% 15% ; 
+    a {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: block;
+    }
+        .img3-cambio1{
+            background-image: url(../img/ta-1.webp);
+            grid-area: a3;
+        }
+        .img3-cambio2{
+            background-image: url(../img/td-1.webp);
+            grid-area: b3;
+        }
+        .img3-cambio3{
+            background-image: url(../img/tm-1.webp);
+            grid-area: c3;
+        }
+        .img3-cambio1:hover{
+            background-image: url(../img/ta-1cambio.png);
+        }
+        .img3-cambio2:hover{
+            background-image: url(../img/td-1cambio.png);
+        }
+        .img3-cambio3:hover{
+            background-image: url(../img/tm-1cambio.png);
+        }
+}
+
+.faldas {
+    height: 800px;
+    display: grid;
+    justify-content: space-around;
+    grid-template-areas: 
+    "a4 b4 c4 "
+    "a4 b4 c4 "
+    "a4 b4 c4 ";
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 40% 15% 15% ; 
+    a {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: block;
+    }
+        .img4-cambio1{
+            background-image: url(../img/mc-1.webp);
+            grid-area: a3;
+        }
+        .img4-cambio2{
+            background-image: url(../img/fa-1.webp);
+            grid-area: b3;
+        }
+        .img4-cambio3{
+            background-image: url(../img/se-1.webp);
+            grid-area: c3;
+        }
+        .img4-cambio1:hover{
+            background-image: url(../img/mc-1cambio.webp);
+        }
+        .img4-cambio2:hover{
+            background-image: url(../img/fa-1cambio.webp);
+        }
+        .img4-cambio3:hover{
+            background-image: url(../img/se-1cambio.webp);
+        }
+}

@@ -160,34 +160,32 @@ nav ul .right li {
 
 .enlaces {
   display: grid;
-  grid-template-areas: "vestidos  sinmangas   sinmangas" "vestidos  sinmangas   sinmangas" "vestidos  tops        faldas";
-  grid-template-columns: 35% 30% 30%;
-  grid-template-rows: 20% 31.5% 48%;
+  grid-template-areas: "vestidos sinmangas sinmangas" "vestidos basicos faldas";
+  grid-template-columns: 25% 25% 25%;
+  grid-template-rows: 50% 50%;
   justify-content: center;
-}
-.enlaces a {
   overflow: hidden;
 }
-.enlaces a #vestidos {
+.enlaces #vestidos {
   grid-area: vestidos;
 }
-.enlaces a #sinmangas {
+.enlaces #sinmangas {
   grid-area: sinmangas;
 }
-.enlaces a #tops {
-  grid-area: tops;
+.enlaces #basicos {
+  grid-area: basicos;
 }
-.enlaces a #faldas {
+.enlaces #faldas {
   grid-area: faldas;
 }
-.enlaces a .img-enlaces {
+.enlaces .img-enlaces {
   padding: 10px;
   width: 100%;
   height: 100%;
   transition: 0.5s;
   object-fit: cover;
 }
-.enlaces a .img-enlaces:hover {
+.enlaces .img-enlaces:hover {
   transform: scale(1.2);
   filter: brightness(50%);
 }
@@ -200,26 +198,144 @@ nav ul .right li {
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: 40% 15% 15%;
 }
-.vestidos .img-cambio1 {
+.vestidos a {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+.vestidos a .img-cambio1 {
   background-image: url(../img/vd-1.webp);
   grid-area: a;
 }
-.vestidos .img-cambio2 {
+.vestidos a .img-cambio2 {
   background-image: url(../img/vl-1.webp);
   grid-area: b;
 }
-.vestidos .img-cambio3 {
+.vestidos a .img-cambio3 {
   background-image: url(../img/vs-1.webp);
   grid-area: c;
 }
-.vestidos .img-cambio1:hover {
+.vestidos a .img-cambio1:hover {
   background-image: url(../img/vd-1cambio.webp);
 }
-.vestidos .img-cambio2:hover {
+.vestidos a .img-cambio2:hover {
   background-image: url(../img/vl-1cambio.webp);
 }
-.vestidos .img-cambio3:hover {
+.vestidos a .img-cambio3:hover {
   background-image: url(../img/vs-1cambio.webp);
+}
+
+.sinmangas {
+  height: 800px;
+  display: grid;
+  justify-content: space-around;
+  grid-template-areas: "a2 b2 c2 " "a2 b2 c2 " "a2 b2 c2 ";
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 40% 15% 15%;
+}
+.sinmangas a {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+.sinmangas .img2-cambio1 {
+  background-image: url(../img/ta2-1.webp);
+  grid-area: a2;
+}
+.sinmangas .img2-cambio2 {
+  background-image: url(../img/tn-1.webp);
+  grid-area: b2;
+}
+.sinmangas .img2-cambio3 {
+  background-image: url(../img/tr-1.webp);
+  grid-area: c2;
+}
+.sinmangas .img2-cambio1:hover {
+  background-image: url(../img/ta2-1cambio.webp);
+}
+.sinmangas .img2-cambio2:hover {
+  background-image: url(../img/tn-1cambio.png);
+}
+.sinmangas .img2-cambio3:hover {
+  background-image: url(../img/tr-1cambio.png);
+}
+
+.basicos {
+  height: 800px;
+  display: grid;
+  justify-content: space-around;
+  grid-template-areas: "a3 b3 c3 " "a3 b3 c3 " "a3 b3 c3 ";
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 40% 15% 15%;
+}
+.basicos a {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+.basicos .img3-cambio1 {
+  background-image: url(../img/ta-1.webp);
+  grid-area: a3;
+}
+.basicos .img3-cambio2 {
+  background-image: url(../img/td-1.webp);
+  grid-area: b3;
+}
+.basicos .img3-cambio3 {
+  background-image: url(../img/tm-1.webp);
+  grid-area: c3;
+}
+.basicos .img3-cambio1:hover {
+  background-image: url(../img/ta-1cambio.png);
+}
+.basicos .img3-cambio2:hover {
+  background-image: url(../img/td-1cambio.png);
+}
+.basicos .img3-cambio3:hover {
+  background-image: url(../img/tm-1cambio.png);
+}
+
+.faldas {
+  height: 800px;
+  display: grid;
+  justify-content: space-around;
+  grid-template-areas: "a4 b4 c4 " "a4 b4 c4 " "a4 b4 c4 ";
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 40% 15% 15%;
+}
+.faldas a {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+.faldas .img4-cambio1 {
+  background-image: url(../img/mc-1.webp);
+  grid-area: a3;
+}
+.faldas .img4-cambio2 {
+  background-image: url(../img/fa-1.webp);
+  grid-area: b3;
+}
+.faldas .img4-cambio3 {
+  background-image: url(../img/se-1.webp);
+  grid-area: c3;
+}
+.faldas .img4-cambio1:hover {
+  background-image: url(../img/mc-1cambio.webp);
+}
+.faldas .img4-cambio2:hover {
+  background-image: url(../img/fa-1cambio.webp);
+}
+.faldas .img4-cambio3:hover {
+  background-image: url(../img/se-1cambio.webp);
 }
 
 .vest {
@@ -320,7 +436,7 @@ nav ul .right li {
     display: grid;
     grid-template-areas: " header   header     header  " " nav      sec-ind    sec-ind  " " nav      sec-des   sec-des  " " nav      sec-des   sec-des  " " nav      footer     footer  ";
     grid-template-columns: 15% 40% 45%;
-    grid-template-rows: 2% 12% 30% 50% 25%;
+    grid-template-rows: 1% 12% 30% 50% 25%;
   }
   #grid-index header {
     grid-area: header;
@@ -329,6 +445,7 @@ nav ul .right li {
     grid-area: nav;
   }
   #grid-index nav ul {
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -438,23 +555,49 @@ nav ul .right li {
     grid-template-columns: 15% 85%;
     grid-template-rows: 2% 18% 60% 25%;
   }
+  #grid-shop header {
+    grid-area: header;
+  }
+  #grid-shop nav {
+    grid-area: nav;
+  }
   #grid-shop nav ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    font-size: 15px;
+    position: relative;
     padding: 0;
   }
+  #grid-shop nav ul .left {
+    display: flex;
+    flex-direction: column;
+  }
+  #grid-shop nav ul .left li {
+    padding: 10px;
+  }
+  #grid-shop nav ul .left li .logo {
+    margin-top: 20px;
+  }
+  #grid-shop nav ul .right {
+    display: flex;
+    flex-direction: column;
+  }
   #grid-shop .contenedor-collec {
+    grid-area: contenedor-collec;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   #grid-shop .contenedor-collec .enlaces {
     display: grid;
-    grid-template-areas: "sinmangas   sinmangas" "tops        faldas" "vestidos    vestidos";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 18% 62%;
+    grid-template-areas: "sinmangas   sinmangas" "basicos        faldas" "vestidos    vestidos";
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 20% 20% 50%;
     justify-content: center;
+  }
+  #grid-shop footer {
+    grid-area: footer;
   }
 }
 /*-------------------------MOBILE L---------------------------*/
@@ -473,40 +616,138 @@ nav ul .right li {
     flex-direction: column;
   }
 }
-/* --------------vestidos-sin mangas-basicos-faldas--------------- */
+/* --------------vestidos--------------- */
 /*-------------------------TABLET---------------------------*/
 @media screen and (max-width: 768px) {
   #grid-collections {
     display: grid;
-    grid-template-areas: "nav header " "nav cont  " "nav footer  ";
+    grid-template-areas: "header header " "nav cont  " "nav footer  ";
     grid-template-columns: 15% 85%;
-    grid-template-rows: 2% 120% 30%;
+    grid-template-rows: 2% 180% 30%;
   }
   #grid-collections header {
+    grid-area: header;
     font-size: 12px;
   }
-  #grid-collections .left {
+  #grid-collections nav {
+    grid-area: nav;
+  }
+  #grid-collections nav ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  #grid-collections nav ul .left {
+    display: flex;
+    flex-direction: column;
     font-size: 12px;
   }
-  #grid-collections .left .logo {
-    width: 45px;
+  #grid-collections nav ul .left li {
+    padding: 10px;
   }
-  #grid-collections .btn {
+  #grid-collections nav ul .left li .logo {
+    margin-top: 20px;
+  }
+  #grid-collections nav ul .right {
+    display: flex;
+    flex-direction: column;
+  }
+  #grid-collections nav ul .btn {
     font-size: 12px;
   }
   #grid-collections .contenedor-vestidos {
     grid-area: cont;
   }
+  #grid-collections .contenedor-vestidos h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
   #grid-collections .contenedor-vestidos .vestidos {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
-  /*
-  .vestidos a img {
-      width: 340px;
+  #grid-collections .contenedor-vestidos .vestidos a {
+    display: block;
+    width: 90%;
+    aspect-ratio: 3/4;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;
   }
-  */
+  #grid-collections .contenedor-vestidos .vestidos .img-cambio1 {
+    background-image: url(../img/vd-1.webp);
+  }
+  #grid-collections .contenedor-vestidos .vestidos .img-cambio1:hover {
+    background-image: url(../img/vd-1cambio.webp);
+  }
+  #grid-collections .contenedor-vestidos .vestidos .img-cambio2 {
+    background-image: url(../img/vl-1.webp);
+  }
+  #grid-collections .contenedor-vestidos .vestidos .img-cambio2:hover {
+    background-image: url(../img/vl-1cambio.webp);
+  }
+  #grid-collections .contenedor-vestidos .vestidos .img-cambio3 {
+    background-image: url(../img/vs-1.webp);
+  }
+  #grid-collections .contenedor-vestidos .vestidos .img-cambio3:hover {
+    background-image: url(../img/vs-1cambio.webp);
+  }
+}
+/*--------------sin mangas--------------*/
+/*-------------------------TABLET---------------------------*/
+@media screen and (max-width: 768px) {
+  .contenedor-vestidos .sinmangas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .contenedor-vestidos .sinmangas a {
+    display: block;
+    width: 90%;
+    aspect-ratio: 3/4;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;
+  }
+}
+/*--------------basicos--------------*/
+/*-------------------------TABLET---------------------------*/
+@media screen and (max-width: 768px) {
+  .contenedor-vestidos .basicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .contenedor-vestidos .basicos a {
+    display: block;
+    width: 90%;
+    aspect-ratio: 3/4;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;
+  }
+}
+/*--------------faldas--------------*/
+/*-------------------------TABLET---------------------------*/
+@media screen and (max-width: 768px) {
+  .contenedor-vestidos .faldas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .contenedor-vestidos .faldas a {
+    display: block;
+    width: 90%;
+    aspect-ratio: 3/4;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;
+  }
 }
 /*-------------------------MOBILE L---------------------------*/
 @media screen and (max-width: 425px) {
@@ -526,6 +767,34 @@ nav ul .right li {
     grid-template-columns: 15% 42% 43%;
     grid-template-rows: 2% 80% 25%;
   }
+  .grid-footer header {
+    grid-area: header;
+  }
+  .grid-footer nav {
+    grid-area: nav;
+  }
+  .grid-footer nav ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+    position: relative;
+  }
+  .grid-footer nav ul .left {
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-footer nav ul .left li {
+    padding: 10px;
+  }
+  .grid-footer nav ul .left li .logo {
+    margin-top: 20px;
+  }
+  .grid-footer nav ul .right {
+    display: flex;
+    flex-direction: column;
+  }
   .grid-footer main {
     grid-area: main;
   }
@@ -535,12 +804,45 @@ nav ul .right li {
     grid-template-columns: 15% 42% 43%;
     grid-template-rows: 3% 65% 42%;
   }
+  .grid-footer-contact header {
+    grid-area: header;
+  }
+  .grid-footer-contact nav {
+    grid-area: nav;
+  }
+  .grid-footer-contact nav ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+    position: relative;
+  }
+  .grid-footer-contact nav ul .left {
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-footer-contact nav ul .left li {
+    padding: 10px;
+  }
+  .grid-footer-contact nav ul .left li .logo {
+    margin-top: 20px;
+  }
+  .grid-footer-contact nav ul .right {
+    display: flex;
+    flex-direction: column;
+  }
   .grid-footer-contact .main-contact {
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .grid-footer-contact .main-contact .imgatito {
-    width: 50%;
-    height: 60%;
+    width: 100%;
+    height: 100%;
+  }
+  footer {
+    grid-area: footer;
   }
   footer ul {
     padding: 0;
