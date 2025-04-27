@@ -1,47 +1,82 @@
 
-footer{ 
-    background-color: rgb(193, 175, 194);
+footer {
     font-size: 20px;
     text-align: center;
-    grid-area: footer;
-    background-color: #000000;
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px 20px;
+    animation: fadeInFooter 1.2s ease-out;
+    border-top: 2px solid #b75dc5;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.6);
+  
     ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .footer{
-            padding: 20px;
-            font-family: "Turret Road", sans-serif;
-            font-weight: 500;
-            a:hover {
-                color: #e644d8;
-                border: solid rgb(104, 57, 98);
-                padding: 10px;
-                border-radius: 5%;
-            }
-          
-        }
-    }
-    .div-redes{ 
-        display: flex;
-        justify-content: space-around;
-        .redes{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 30px;
+  
+      .footer {
+        padding: 10px 0;
+        font-family: "Turret Road", sans-serif;
+        font-weight: 500;
+  
+        a {
+          text-decoration: none;
+          color: #d4c3d2;
+          transition: all 0.3s ease;
+  
+          &:hover {
+            color: #e644d8;
+            border: solid 2px #683962;
+            padding: 10px 15px;
             border-radius: 10px;
-            width: 50px;
-            margin-inline: 30px;
-            margin-top: 80px;
-            margin-bottom: 30px;
-            
+            background-color: rgba(255, 255, 255, 0.05);
+          }
         }
+      }
     }
+  
+    .div-redes {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 30px;
+  
+      .redes {
+        width: 50px;
+        border-radius: 10px;
+        transition: transform 0.3s ease, filter 0.3s ease;
+  
+        &:hover {
+          transform: translateY(-8px) scale(1.1);
+          filter: brightness(1.2);
+        }
+      }
+    }
+  
     .div-p {
-        display: flex;
-        justify-content: space-between;
-        color: #d4c3d2;
+      display: flex;
+      justify-content: space-between;
+      color: #d4c3d2;
+      font-size: 0.9rem;
+      border-top: 1px solid #444;
+      padding-top: 15px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    @keyframes fadeInFooter {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 }
-
-
-
 

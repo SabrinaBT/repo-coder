@@ -1,33 +1,69 @@
+
 .enlaces {
-    display: grid;
+        display: grid;
         grid-template-areas: 
         "vestidos sinmangas sinmangas"
         "vestidos basicos faldas";
-        grid-template-columns:25% 25% 25%;
+        grid-template-columns:40% 1fr 1fr;
         grid-template-rows:  50% 50%;
         justify-content: center;
         overflow: hidden;
+        margin-bottom: 50px;
+        margin: 20px;
+        .img-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            .btn-overlay {
+                padding: 10px 20px;
+                background-color: #edd1f0;
+                color: #000000;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-family: "Jura", sans-serif;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                z-index: 2;
+                cursor: pointer;
+            }
+            &:hover .btn-overlay {
+                opacity: 1;
+                background-color: #000000;
+                color: white; 
+                border: solid rgb(0, 0, 0);
+            }
+        }
         #vestidos {
+            padding: 20px;
             grid-area: vestidos;
         }
         #sinmangas {
+            padding: 20px;
             grid-area: sinmangas;
         }
         #basicos {
+            padding: 20px;
             grid-area: basicos;
         }
         #faldas {
+            padding: 20px;
             grid-area: faldas;
         }
         .img-enlaces {
-            padding: 10px;
+            z-index: 1;
+            position: relative;
             width: 100%;
             height: 100%;
             transition: 0.5s;
             object-fit: cover;
         }
         .img-enlaces:hover{
-            transform: scale(1.2);
+            transform: scale(1.1);
             filter: brightness(50%);
         }
 }
