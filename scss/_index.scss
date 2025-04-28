@@ -1,36 +1,60 @@
+
+$color-principal: #f8c8dc; 
+$color-hover: #f6a5c0;     
+$fuente-principal: 'Orbitron', sans-serif;
+
+
+@mixin img-destacados {
+    width: 100%;
+    padding: 10px;
+}
+
+
 .img-inicio {
     width: 100%;
 }
+
 .sect-dest {
-    background-color: rgb(250, 215, 250);
+    background-color: $color-principal;
     text-align: center;
     padding-bottom: 10px;
+    font-family: $fuente-principal;
+    transition: background-color 0.5s ease; 
+
+    &:hover {
+        background-color: $color-hover; 
+    }
+
     h2 {
         padding: 10px;
     }
+
     .destacados {
         display: grid;
         grid-template-areas: 
-        "img1  img2   img3   img4"
-        "img5  img6   img7   img8";
-        grid-template-columns:23% 23% 23% 23%;
-        grid-template-rows:  50% 50%;
+            "img1 img2 img3 img4"
+            "img5 img6 img7 img8";
+        grid-template-columns: 23% 23% 23% 23%;
+        grid-template-rows: 50% 50%;
         justify-content: center;
-        .imgs:hover {
-            transform: scale(1.09);
-        }
-        #img1{grid-area: img1; width: 100%; padding: 10px;}
-        #img2{grid-area: img2; width: 100%; padding: 10px;}
-        #img3{grid-area: img3; width: 100%; padding: 10px;}
-        #img4{grid-area: img4; width: 100%; padding: 10px;}
-        #img5{grid-area: img5; width: 100%; padding: 10px;}
-        #img6{grid-area: img6; width: 100%; padding: 10px;}
-        #img7{grid-area: img7; width: 100%; padding: 10px;}
-        #img8{grid-area: img8; width: 100%; padding: 10px;}
 
+        .imgs {
+            transition: transform 0.3s;
+            &:hover {
+                transform: scale(1.09);
+            }
+        }
+
+        #img1 { grid-area: img1; @include img-destacados; }
+        #img2 { grid-area: img2; @include img-destacados; }
+        #img3 { grid-area: img3; @include img-destacados; }
+        #img4 { grid-area: img4; @include img-destacados; }
+        #img5 { grid-area: img5; @include img-destacados; }
+        #img6 { grid-area: img6; @include img-destacados; }
+        #img7 { grid-area: img7; @include img-destacados; }
+        #img8 { grid-area: img8; @include img-destacados; }
     }
 }
-
 
 
 

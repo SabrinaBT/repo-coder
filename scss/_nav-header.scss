@@ -35,18 +35,68 @@ nav {
           li { 
             padding-left: 10%;
             list-style-type: none;
+            a {
+                position: relative;
+                text-decoration: none;
+                color: black;
+                transition: color 0.3s ease;
+      
+                &::after {
+                  content: "";
+                  position: absolute;
+                  width: 0;
+                  height: 2px;
+                  display: block;
+                  margin-top: 5px;
+                  right: 0;
+                  background: #e94ce9;
+                  transition: width 0.4s ease;
+                  transform: translateY(5px);
+                  transform-origin: right;
+                }
+      
+                &:hover {
+                  color: #e94ce9; 
+      
+                  &::after {
+                    width: 100%;
+                    left: 0;
+                    background: #e94ce9;
+                  }
+                }
+              }
             .logo {
                 width: 65px; 
                 border-radius: 30%;
             }
           }
         }
-        .right{
+        .right {
           display: flex;
           flex-direction: row;
           align-items: center;
+    
           li {
             list-style: none;
+    
+            button {
+              background-color: white;
+              border: 2px solid #e94ce9;
+              padding: 8px 20px;
+              border-radius: 20px;
+              font-family: "Turret Road", sans-serif;
+              font-weight: bold;
+              color: #e94ce9;
+              transition: all 0.3s ease;
+              cursor: pointer;
+    
+              &:hover {
+                background-color: #e94ce9;
+                color: white;
+                transform: scale(1.05);
+                box-shadow: 0 0 10px rgba(233, 76, 233, 0.5);
+              }
+            }
           }
         } 
     }
