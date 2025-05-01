@@ -141,17 +141,16 @@ footer .div-p {
   }
 }
 
-header {
+body header {
   text-align: center;
   background-color: #d4c3d2;
 }
-header h3 {
+body header h3 {
   font-size: 0.9em;
   font-family: "Times New Roman", Times, serif;
   padding: 5px;
 }
-
-nav {
+body nav {
   position: sticky !important;
   top: 0;
   z-index: 999;
@@ -160,7 +159,7 @@ nav {
   background-color: rgb(253, 240, 255);
   margin-bottom: 10px;
 }
-nav ul {
+body nav ul {
   font-family: "Turret Road", sans-serif;
   font-weight: 1000;
   display: flex;
@@ -169,23 +168,24 @@ nav ul {
   font-size: 1.5em;
   justify-content: space-between;
   margin: 0;
+  padding: 0;
 }
-nav ul .left {
+body nav ul li {
+  list-style: none;
+}
+body nav ul li.left {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 20px;
 }
-nav ul .left li {
-  padding-left: 10%;
-  list-style-type: none;
-}
-nav ul .left li a {
+body nav ul li.left a {
   position: relative;
   text-decoration: none;
   color: black;
   transition: color 0.3s ease;
 }
-nav ul .left li a::after {
+body nav ul li.left a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -198,27 +198,25 @@ nav ul .left li a::after {
   transform: translateY(5px);
   transform-origin: right;
 }
-nav ul .left li a:hover {
+body nav ul li.left a:hover {
   color: #e94ce9;
 }
-nav ul .left li a:hover::after {
+body nav ul li.left a:hover::after {
   width: 100%;
   left: 0;
   background: #e94ce9;
 }
-nav ul .left li .logo {
+body nav ul li.left .logo {
   width: 65px;
   border-radius: 30%;
 }
-nav ul .right {
+body nav ul li.right {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 10px;
 }
-nav ul .right li {
-  list-style: none;
-}
-nav ul .right li button {
+body nav ul li.right button {
   background-color: white;
   border: 2px solid #e94ce9;
   padding: 8px 20px;
@@ -229,13 +227,12 @@ nav ul .right li button {
   transition: all 0.3s ease;
   cursor: pointer;
 }
-nav ul .right li button:hover {
+body nav ul li.right button:hover {
   background-color: #e94ce9;
   color: white;
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(233, 76, 233, 0.5);
 }
-
 @keyframes aparecerZoom {
   0% {
     transform: scale(0.5);
@@ -264,7 +261,7 @@ nav ul .right li button:hover {
     opacity: 1;
   }
 }
-.modal-content {
+body .modal-content {
   background-color: #fff4fb;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
@@ -273,7 +270,7 @@ nav ul .right li button:hover {
   animation: aparecerZoom 0.4s ease-out;
   transform-origin: center;
 }
-.modal-content .modal-header {
+body .modal-content .modal-header {
   background-color: #b75dc5;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -282,42 +279,42 @@ nav ul .right li button:hover {
   align-items: center;
   justify-content: space-between;
 }
-.modal-content .modal-header .modal-title {
+body .modal-content .modal-header .modal-title {
   font-size: 1.5rem;
   font-weight: 700;
 }
-.modal-content .modal-header .btn-close {
+body .modal-content .modal-header .btn-close {
   background-color: white;
   border-radius: 50%;
   padding: 6px;
   transition: transform 0.3s ease;
 }
-.modal-content .modal-header .btn-close:hover {
+body .modal-content .modal-header .btn-close:hover {
   transform: scale(1.1);
 }
-.modal-content .modal-body .form-1 {
+body .modal-content .modal-body .form-1 {
   display: flex;
   flex-direction: column;
 }
-.modal-content .modal-body .form-1 input,
-.modal-content .modal-body .form-1 select,
-.modal-content .modal-body .form-1 textarea {
+body .modal-content .modal-body .form-1 input,
+body .modal-content .modal-body .form-1 select,
+body .modal-content .modal-body .form-1 textarea {
   animation: popInputs 0.5s ease forwards;
   animation-delay: 0.2s;
   opacity: 0;
 }
-.modal-content .modal-body h1 {
+body .modal-content .modal-body h1 {
   font-size: 1.3rem;
   color: #b75dc5;
   margin-bottom: 1rem;
   text-align: center;
   font-weight: 600;
 }
-.modal-content .modal-body label {
+body .modal-content .modal-body label {
   color: #6e2c72;
   font-weight: 500;
 }
-.modal-content .modal-body input, .modal-content .modal-body select, .modal-content .modal-body textarea {
+body .modal-content .modal-body input, body .modal-content .modal-body select, body .modal-content .modal-body textarea {
   width: 100%;
   padding: 10px;
   border: 2px solid #e4cce8;
@@ -326,23 +323,23 @@ nav ul .right li button:hover {
   margin-bottom: 1rem;
   transition: all 0.3s ease;
 }
-.modal-content .modal-body input:focus, .modal-content .modal-body select:focus, .modal-content .modal-body textarea:focus {
+body .modal-content .modal-body input:focus, body .modal-content .modal-body select:focus, body .modal-content .modal-body textarea:focus {
   outline: none;
   border-color: #c96cd1;
   box-shadow: 0 0 6px rgba(201, 108, 209, 0.5);
 }
-.modal-content .modal-body input[type=checkbox] {
+body .modal-content .modal-body input[type=checkbox] {
   width: auto;
   margin-left: 0.5rem;
   opacity: 1;
   animation: none;
 }
-.modal-content .modal-footer {
+body .modal-content .modal-footer {
   display: flex;
   justify-content: flex-end;
   padding-top: 0;
 }
-.modal-content .modal-footer .btn-danger {
+body .modal-content .modal-footer .btn-danger {
   background-color: #e644d8;
   border: none;
   font-weight: 600;
@@ -350,7 +347,7 @@ nav ul .right li button:hover {
   padding: 8px 16px;
   transition: all 0.3s ease;
 }
-.modal-content .modal-footer .btn-danger:hover {
+body .modal-content .modal-footer .btn-danger:hover {
   background-color: #c632b8;
   transform: scale(1.05);
 }
@@ -815,24 +812,21 @@ section .vest .aside-vest .pvest button:hover {
     justify-content: center;
     font-size: 15px;
   }
-  #grid-index nav ul .left {
-    font-size: 12px;
+  #grid-index nav ul li {
     display: flex;
     flex-direction: column;
   }
-  #grid-index nav ul .left li {
+  #grid-index nav ul li .left {
+    font-size: 12px;
     padding: 10px;
   }
-  #grid-index nav ul .left li .logo {
+  #grid-index nav ul li .left .logo {
     margin-top: 20px;
     width: 50px;
   }
-  #grid-index nav ul .right {
-    display: flex;
-    flex-direction: column;
-  }
-  #grid-index nav ul .right .btn {
-    font-size: 11px;
+  #grid-index nav ul li button {
+    margin-top: 10px;
+    font-size: 10px;
   }
   #grid-index .section-index {
     grid-area: sec-ind;
@@ -875,26 +869,21 @@ section .vest .aside-vest .pvest button:hover {
     padding: 0.5%;
     justify-content: space-between;
   }
-  #grid-index nav ul .left {
+  #grid-index nav ul li {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    font-size: 10px;
-  }
-  #grid-index nav ul .left li {
     padding-bottom: 0;
     padding-top: 0;
+    font-size: 10px;
+    align-items: center;
   }
-  #grid-index nav ul .left li .logo {
+  #grid-index nav ul li .logo {
     width: 40px;
     margin: 0;
   }
-  #grid-index nav ul .right {
-    display: flex;
-    flex-direction: row;
-  }
-  #grid-index nav ul .right .btn {
-    font-size: 12px;
+  #grid-index nav ul li .btn {
+    font-size: 10px;
+    margin: 0;
   }
   #grid-index .section-index {
     font-size: 0.7em;
@@ -951,6 +940,11 @@ section .vest .aside-vest .pvest button:hover {
   }
   #grid-shop nav {
     grid-area: nav;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   #grid-shop nav ul {
     padding: 0;
@@ -958,26 +952,22 @@ section .vest .aside-vest .pvest button:hover {
     flex-direction: column;
     justify-content: center;
     font-size: 15px;
-    position: relative;
   }
-  #grid-shop nav ul .left {
-    font-size: 12px;
+  #grid-shop nav ul li {
     display: flex;
     flex-direction: column;
   }
-  #grid-shop nav ul .left li {
+  #grid-shop nav ul li .left {
+    font-size: 12px;
     padding: 10px;
   }
-  #grid-shop nav ul .left li .logo {
+  #grid-shop nav ul li .left .logo {
     margin-top: 20px;
     width: 50px;
   }
-  #grid-shop nav ul .right {
-    display: flex;
-    flex-direction: column;
-  }
-  #grid-shop nav ul .right .btn {
-    font-size: 11px;
+  #grid-shop nav ul li button {
+    margin-top: 10px;
+    font-size: 10px;
   }
   #grid-shop .contenedor-collec {
     grid-area: contenedor-collec;
@@ -1024,26 +1014,21 @@ section .vest .aside-vest .pvest button:hover {
     padding: 0.5%;
     justify-content: space-between;
   }
-  #grid-shop nav ul .left {
+  #grid-shop nav ul li {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    font-size: 10px;
-  }
-  #grid-shop nav ul .left li {
     padding-bottom: 0;
     padding-top: 0;
+    font-size: 10px;
+    align-items: center;
   }
-  #grid-shop nav ul .left li .logo {
+  #grid-shop nav ul li .logo {
     width: 40px;
     margin: 0;
   }
-  #grid-shop nav ul .right {
-    display: flex;
-    flex-direction: row;
-  }
-  #grid-shop nav ul .right .btn {
-    font-size: 12px;
+  #grid-shop nav ul li .btn {
+    font-size: 10px;
+    margin: 0;
   }
   #grid-shop .contenedor-collec .enlaces {
     display: flex;
@@ -1080,29 +1065,34 @@ section .vest .aside-vest .pvest button:hover {
   }
   #grid-collections nav {
     grid-area: nav;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   #grid-collections nav ul {
     padding: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
   }
-  #grid-collections nav ul .left {
+  #grid-collections nav ul li {
     display: flex;
     flex-direction: column;
-    font-size: 12px;
   }
-  #grid-collections nav ul .left li {
+  #grid-collections nav ul li .left {
+    font-size: 12px;
     padding: 10px;
   }
-  #grid-collections nav ul .left li .logo {
+  #grid-collections nav ul li .left .logo {
     margin-top: 20px;
+    width: 50px;
   }
-  #grid-collections nav ul .right {
-    display: flex;
-    flex-direction: column;
-  }
-  #grid-collections nav ul .btn {
-    font-size: 12px;
+  #grid-collections nav ul li button {
+    margin-top: 10px;
+    font-size: 10px;
   }
   #grid-collections .contenedor-vestidos {
     grid-area: cont;
@@ -1229,26 +1219,21 @@ section .vest .aside-vest .pvest button:hover {
     padding: 0.5%;
     justify-content: space-between;
   }
-  #grid-collections nav ul .left {
+  #grid-collections nav ul li {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    font-size: 10px;
-  }
-  #grid-collections nav ul .left li {
     padding-bottom: 0;
     padding-top: 0;
+    font-size: 10px;
+    align-items: center;
   }
-  #grid-collections nav ul .left li .logo {
+  #grid-collections nav ul li .logo {
     width: 40px;
     margin: 0;
   }
-  #grid-collections nav ul .right {
-    display: flex;
-    flex-direction: row;
-  }
-  #grid-collections nav ul .right .btn {
-    font-size: 12px;
+  #grid-collections nav ul li .btn {
+    font-size: 10px;
+    margin: 0;
   }
   #grid-collections footer a {
     font-size: 15px;
@@ -1302,7 +1287,6 @@ section .vest .aside-vest .pvest button:hover {
     margin: 0;
   }
   .grid-marcas nav {
-    grid-area: nav;
     position: sticky;
     margin: 0;
     padding: 0;
@@ -1314,26 +1298,21 @@ section .vest .aside-vest .pvest button:hover {
     padding: 0.5%;
     justify-content: space-between;
   }
-  .grid-marcas nav ul .left {
+  .grid-marcas nav ul li {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    font-size: 10px;
-  }
-  .grid-marcas nav ul .left li {
     padding-bottom: 0;
     padding-top: 0;
+    font-size: 10px;
+    align-items: center;
   }
-  .grid-marcas nav ul .left li .logo {
+  .grid-marcas nav ul li .logo {
     width: 40px;
     margin: 0;
   }
-  .grid-marcas nav ul .right {
-    display: flex;
-    flex-direction: row;
-  }
-  .grid-marcas nav ul .right .btn {
-    font-size: 12px;
+  .grid-marcas nav ul li .btn {
+    font-size: 10px;
+    margin: 0;
   }
   .grid-marcas section {
     grid-area: section1;
@@ -1394,6 +1373,11 @@ section .vest .aside-vest .pvest button:hover {
   }
   .grid-footer nav {
     grid-area: nav;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   .grid-footer nav ul {
     padding: 0;
@@ -1401,26 +1385,22 @@ section .vest .aside-vest .pvest button:hover {
     flex-direction: column;
     justify-content: center;
     font-size: 15px;
-    position: relative;
   }
-  .grid-footer nav ul .left {
-    font-size: 12px;
+  .grid-footer nav ul li {
     display: flex;
     flex-direction: column;
   }
-  .grid-footer nav ul .left li {
+  .grid-footer nav ul li .left {
+    font-size: 12px;
     padding: 10px;
   }
-  .grid-footer nav ul .left li .logo {
+  .grid-footer nav ul li .left .logo {
     margin-top: 20px;
     width: 50px;
   }
-  .grid-footer nav ul .right {
-    display: flex;
-    flex-direction: column;
-  }
-  .grid-footer nav ul .right .btn {
-    font-size: 11px;
+  .grid-footer nav ul li button {
+    margin-top: 10px;
+    font-size: 10px;
   }
   .grid-footer main {
     grid-area: main;
@@ -1496,7 +1476,7 @@ section .vest .aside-vest .pvest button:hover {
     display: grid;
     grid-template-areas: "header header  " "nav nav   " "main main" " footer  footer";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1% 2.7% 1fr 35%;
+    grid-template-rows: 1% 4% 1fr 35%;
   }
   .grid-footer header {
     font-size: 13px;
@@ -1521,26 +1501,21 @@ section .vest .aside-vest .pvest button:hover {
     padding: 0.5%;
     justify-content: space-between;
   }
-  .grid-footer nav ul .left {
+  .grid-footer nav ul li {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    font-size: 10px;
-  }
-  .grid-footer nav ul .left li {
     padding-bottom: 0;
     padding-top: 0;
+    font-size: 10px;
+    align-items: center;
   }
-  .grid-footer nav ul .left li .logo {
-    width: 40px;
+  .grid-footer nav ul li .logo {
+    width: 20px;
     margin: 0;
   }
-  .grid-footer nav ul .right {
-    display: flex;
-    flex-direction: row;
-  }
-  .grid-footer nav ul .right .btn {
-    font-size: 12px;
+  .grid-footer nav ul li .btn {
+    font-size: 10px;
+    margin: 0;
   }
   .grid-footer main section .about {
     font-size: 1.2em;
@@ -1583,26 +1558,21 @@ section .vest .aside-vest .pvest button:hover {
     padding: 0.5%;
     justify-content: space-between;
   }
-  .grid-footer-contact nav ul .left {
+  .grid-footer-contact nav ul li {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    font-size: 10px;
-  }
-  .grid-footer-contact nav ul .left li {
     padding-bottom: 0;
     padding-top: 0;
+    font-size: 10px;
+    align-items: center;
   }
-  .grid-footer-contact nav ul .left li .logo {
+  .grid-footer-contact nav ul li .logo {
     width: 40px;
     margin: 0;
   }
-  .grid-footer-contact nav ul .right {
-    display: flex;
-    flex-direction: row;
-  }
-  .grid-footer-contact nav ul .right .btn {
-    font-size: 12px;
+  .grid-footer-contact nav ul li .btn {
+    font-size: 10px;
+    margin: 0;
   }
   .grid-footer-contact main {
     grid-column: 1/3;

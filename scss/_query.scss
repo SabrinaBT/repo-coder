@@ -25,7 +25,7 @@
             }
         }
       
-      nav {
+    nav {
         grid-area: nav;
         position: sticky;  
         top: 0;           
@@ -39,30 +39,24 @@
           flex-direction: column;
           justify-content: center;
           font-size: 15px;
-          
-          .left {
-            font-size: 12px;
-            display: flex;
-            flex-direction: column;
-            
             li {
-              padding: 10px;
-              .logo {
-                margin-top: 20px;
-                width: 50px;
-              }
+                display: flex;
+                flex-direction: column;
+                .left {
+                    font-size: 12px;
+                    padding: 10px;
+                    .logo {
+                        margin-top: 20px;
+                        width: 50px;
+                    }
+                }
+                button {
+                    margin-top: 10px;
+                    font-size: 10px;
+                }
             }
-          }
-  
-          .right {
-            display: flex;
-            flex-direction: column;
-            .btn {
-              font-size: 11px;
-            }
-          }
         }
-      }
+    }
   
       .section-index {
         grid-area: sec-ind;
@@ -118,26 +112,20 @@
                 flex-direction: row;
                 padding: 0.5%; 
                 justify-content: space-between;
-                .left {
+                li {
                     display: flex;
                     flex-direction: row;
-                    align-items: center;
+                    padding-bottom: 0;
+                    padding-top: 0;
                     font-size: 10px;
-                    li {
-                        padding-bottom: 0;
-                        padding-top: 0;
-                        .logo {
-                            width: 40px;  
-                            margin: 0;
-                        }
+                    align-items: center;
+                    .logo {
+                        width: 40px;  
+                        margin: 0;
                     }
-                    
-                }
-                .right {
-                    display: flex;
-                    flex-direction: row;
                     .btn {
-                        font-size: 12px;
+                        font-size: 10px;
+                        margin: 0;
                     }
                 }
             }        
@@ -209,31 +197,32 @@
         }
         nav {
             grid-area: nav;
+            position: sticky;  
+            top: 0;           
+            z-index: 10;       
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
             
             ul {
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                font-size: 15px;
-                position: relative;
-                .left {
-                    font-size: 12px;
+              padding: 0;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              font-size: 15px;
+                li {
                     display: flex;
                     flex-direction: column;
-                    li{
+                    .left {
+                        font-size: 12px;
                         padding: 10px;
                         .logo {
                             margin-top: 20px;
                             width: 50px;
                         }
                     }
-                }
-                .right{
-                    display: flex;
-                    flex-direction: column;
-                    .btn {
-                        font-size: 11px;
+                    button {
+                        margin-top: 10px;
+                        font-size: 10px;
                     }
                 }
             }
@@ -286,26 +275,20 @@
                 flex-direction: row;
                 padding: 0.5%; 
                 justify-content: space-between;
-                .left {
+                li {
                     display: flex;
                     flex-direction: row;
-                    align-items: center;
+                    padding-bottom: 0;
+                    padding-top: 0;
                     font-size: 10px;
-                    li {
-                        padding-bottom: 0;
-                        padding-top: 0;
-                        .logo {
-                            width: 40px;  
-                            margin: 0;
-                        }
+                    align-items: center;
+                    .logo {
+                        width: 40px;  
+                        margin: 0;
                     }
-                    
-                }
-                .right {
-                    display: flex;
-                    flex-direction: row;
                     .btn {
-                        font-size: 12px;
+                        font-size: 10px;
+                        margin: 0;
                     }
                 }
             }        
@@ -356,27 +339,33 @@
         }
         nav {
             grid-area: nav;
+            position: sticky;  
+            top: 0;           
+            z-index: 10;       
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            
             ul {
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                .left {
+              padding: 0;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              font-size: 15px;
+                li {
                     display: flex;
                     flex-direction: column;
-                    font-size: 12px;
-                    li{
+                    .left {
+                        font-size: 12px;
                         padding: 10px;
                         .logo {
                             margin-top: 20px;
+                            width: 50px;
                         }
                     }
-                }
-                .right{
-                    display: flex;
-                    flex-direction: column;
-                }
-                .btn {
-                    font-size: 12px;
+                    button {
+                        margin-top: 10px;
+                        font-size: 10px;
+                    }
                 }
             }
         }
@@ -527,26 +516,20 @@
                 flex-direction: row;
                 padding: 0.5%; 
                 justify-content: space-between;
-                .left {
+                li {
                     display: flex;
                     flex-direction: row;
-                    align-items: center;
+                    padding-bottom: 0;
+                    padding-top: 0;
                     font-size: 10px;
-                    li {
-                        padding-bottom: 0;
-                        padding-top: 0;
-                        .logo {
-                            width: 40px;  
-                            margin: 0;
-                        }
+                    align-items: center;
+                    .logo {
+                        width: 40px;  
+                        margin: 0;
                     }
-                    
-                }
-                .right {
-                    display: flex;
-                    flex-direction: row;
                     .btn {
-                        font-size: 12px;
+                        font-size: 10px;
+                        margin: 0;
                     }
                 }
             }        
@@ -617,7 +600,6 @@
             }
         }
         nav {
-            grid-area: nav;
             position: sticky;
             margin: 0;
             padding: 0;
@@ -627,26 +609,20 @@
                 flex-direction: row;
                 padding: 0.5%; 
                 justify-content: space-between;
-                .left {
+                li {
                     display: flex;
                     flex-direction: row;
-                    align-items: center;
+                    padding-bottom: 0;
+                    padding-top: 0;
                     font-size: 10px;
-                    li {
-                        padding-bottom: 0;
-                        padding-top: 0;
-                        .logo {
-                            width: 40px;  
-                            margin: 0;
-                        }
+                    align-items: center;
+                    .logo {
+                        width: 40px;  
+                        margin: 0;
                     }
-                    
-                }
-                .right {
-                    display: flex;
-                    flex-direction: row;
                     .btn {
-                        font-size: 12px;
+                        font-size: 10px;
+                        margin: 0;
                     }
                 }
             }        
@@ -714,31 +690,32 @@
         }
         nav {
             grid-area: nav;
+            position: sticky;  
+            top: 0;           
+            z-index: 10;       
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
             
             ul {
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                font-size: 15px;
-                position: relative;
-                .left {
-                    font-size: 12px;
+              padding: 0;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              font-size: 15px;
+                li {
                     display: flex;
                     flex-direction: column;
-                    li{
+                    .left {
+                        font-size: 12px;
                         padding: 10px;
                         .logo {
                             margin-top: 20px;
                             width: 50px;
                         }
                     }
-                }
-                .right{
-                    display: flex;
-                    flex-direction: column;
-                    .btn {
-                        font-size: 11px;
+                    button {
+                        margin-top: 10px;
+                        font-size: 10px;
                     }
                 }
             }
@@ -830,7 +807,7 @@
         "main main"
         " footer  footer";
         grid-template-columns: 50% 50%;
-        grid-template-rows: 1% 2.7% 1fr 35%;
+        grid-template-rows: 1% 4% 1fr 35%;
         header {
             font-size: 13px;
             display: flex;
@@ -852,30 +829,24 @@
                 flex-direction: row;
                 padding: 0.5%; 
                 justify-content: space-between;
-                .left {
+                li {
                     display: flex;
                     flex-direction: row;
-                    align-items: center;
+                    padding-bottom: 0;
+                    padding-top: 0;
                     font-size: 10px;
-                    li {
-                        padding-bottom: 0;
-                        padding-top: 0;
-                        .logo {
-                            width: 40px;  
-                            margin: 0;
-                        }
+                    align-items: center;
+                    .logo {
+                        width: 20px;  
+                        margin: 0;
                     }
-                    
-                }
-                .right {
-                    display: flex;
-                    flex-direction: row;
                     .btn {
-                        font-size: 12px;
+                        font-size: 10px;
+                        margin: 0;
                     }
                 }
             }        
-        } 
+        }
 
         main {
             section {
@@ -934,26 +905,20 @@
                 flex-direction: row;
                 padding: 0.5%; 
                 justify-content: space-between;
-                .left {
+                li {
                     display: flex;
                     flex-direction: row;
-                    align-items: center;
+                    padding-bottom: 0;
+                    padding-top: 0;
                     font-size: 10px;
-                    li {
-                        padding-bottom: 0;
-                        padding-top: 0;
-                        .logo {
-                            width: 40px;  
-                            margin: 0;
-                        }
+                    align-items: center;
+                    .logo {
+                        width: 40px;  
+                        margin: 0;
                     }
-                    
-                }
-                .right {
-                    display: flex;
-                    flex-direction: row;
                     .btn {
-                        font-size: 12px;
+                        font-size: 10px;
+                        margin: 0;
                     }
                 }
             }        

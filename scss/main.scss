@@ -1,51 +1,12 @@
-@import "_index";
+@import "_index-gral";
 @import "_footer";
 @import "_nav-header";
 @import "_shop";
 @import "_collections";
 @import "_modelos";
 @import "_ab-cont";
-@import "query";
+@import "_query";
 
-/* Selector/estilos universales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;    
-}
-
-body {
-    background-color: rgb(241, 218, 255);
-    color: rgb(0, 0, 0);
-    .container {
-        height: 100vh;
-    }
-    .p-pages {
-        margin-top: 10px;
-        font-family: monospace;
-        font-size: 1.2em;
-        text-align: center;
-    }
-    a {
-        text-decoration: none;
-        color: #f5a5cd;    
-    }
-    a:visited {
-        text-decoration: none;
-    }
-    h1 {
-        text-align: center;
-        padding: 5%;
-        font-family: "Orbitron", sans-serif;
-        font-size: 1.5em;
-        
-    }
-    h2 { 
-        font-family: "Almendra SC", serif;
-        color: #6a6b83; 
-        font-size: 2em;
-    }
-}   
 
 
 

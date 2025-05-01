@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&amp;display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <title>KOSMOS - Tienda de Ropa</title>
@@ -19,19 +19,15 @@
         </header>
         <nav>
             <ul class="d-flex justify-content-between align-items-center">
-                <div class="left d-flex">
-                    <li><a href="index.html"><img class="logo" src="./img/logo.gif" alt="Logo de la página"></a></li>
-                    <li><a href="./pages/shop.html">SHOP</a></li>
-                    <li><a href="./pages/aboutus.html">BRAND</a></li>
-                </div>
-                <div class="right d-flex align-items-center">
-                    <li>
-                        <button class="btn btn-md clase-boton" data-bs-toggle="modal" data-bs-target="#mi-modal-1">Ingresá</button>
-                    </li>
-                    <li>
-                        <button class="btn btn-md" data-bs-toggle="modal" data-bs-target="#mi-modal-2">Registrate</button>
-                    </li>
-                </div>
+              <li class="left d-flex">
+                <a href="index.html"><img class="logo" src="./img/logo.gif" alt="Logo de la página"></a>
+                <a href="./pages/shop.html">SHOP</a>
+                <a href="./pages/aboutus.html">BRAND</a>
+              </li>
+              <li class="right d-flex align-items-center">
+                <button class="btn btn-md clase-boton" data-bs-toggle="modal" data-bs-target="#mi-modal-1">Ingresá</button>
+                <button class="btn btn-md" data-bs-toggle="modal" data-bs-target="#mi-modal-2">Registrate</button>
+              </li>
             </ul>
         </nav>
         
@@ -45,10 +41,10 @@
                     <div class="modal-body">
                         <h1>Complete con sus datos</h1>
                         <form class="form-1" action="/submit" method="post">
-                            <label for="email">Email:</label>
-                            <input type="email" name="email" id="email">
-                            <label for="password">Contraseña:</label>
-                            <input type="password" name="password" id="password">
+                            <label for="email-iniciar">Email:</label>
+                            <input type="email" name="email" id="email-iniciar">
+                            <label for="password-iniciar">Contraseña:</label>
+                            <input type="password" name="password" id="password-iniciar">
                             <button>INICIAR SESIÓN</button>
                         </form> 
                     </div>
@@ -72,14 +68,14 @@
                             <label for="nombre">Nombre:</label>
                             <input type="text" name="nombre" id="nombre">
                 
-                            <label for="email">Email:</label>
-                            <input type="email" name="email" id="email">
+                            <label for="email-registrar">Email:</label>
+                            <input type="email" name="email" id="email-registrar">
 
                             <label for="number">Teléfono:</label>
                             <input type="number" name="number" id="number">
 
-                            <label for="password">Contraseña:</label>
-                            <input type="password" name="password" id="password">
+                            <label for="password-registrar">Contraseña:</label>
+                            <input type="password" name="password" id="password-registrar">
                 
                             <label for="checkbox">No soy un robot</label>
                             <input type="checkbox" name="checkbox" id="checkbox">
@@ -117,7 +113,7 @@
             </ul>
             <div class="div-redes">
                 <a href="https://www.instagram.com/" target="_blank"><img class="redes" src="./img/instagram.png" alt="Logo Instagram"></a>
-                <a href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des" target="_blank"><img class="redes" src="./img/tiktok.png" alt="Logo TikTok"></a>
+                <a href="https://www.tiktok.com/login?lang=es&amp;redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des" target="_blank"><img class="redes" src="./img/tiktok.png" alt="Logo TikTok"></a>
                 <a href="https://x.com/?lang=es" target="_blank"><img class="redes" src="./img/twitter.png" alt="Logo X"></a>
                 
             </div>
