@@ -1,3 +1,71 @@
+/* Selector/estilos universales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(241, 218, 255);
+  color: rgb(0, 0, 0);
+}
+body .container {
+  height: 100vh;
+}
+body .p-pages {
+  margin-top: 10px;
+  font-family: monospace;
+  font-size: 1.2em;
+  text-align: center;
+}
+body a {
+  text-decoration: none;
+  color: #f5a5cd;
+}
+body a:visited {
+  text-decoration: none;
+}
+body h1 {
+  text-align: center;
+  padding: 5%;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5em;
+}
+body h2 {
+  font-family: "Almendra SC", serif;
+  color: #6a6b83;
+  font-size: 2em;
+}
+
+.section-index h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #000000;
+  width: 0;
+  animation: escribir 4s steps(30, end) forwards, parpadeo 0.75s step-end infinite;
+  color: #ce7bbc;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+@keyframes escribir {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes parpadeo {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #8b8b8b;
+  }
+}
 .img-inicio {
   width: 100%;
 }
@@ -419,7 +487,10 @@ body .modal-content .modal-footer .btn-danger:hover {
   filter: brightness(50%);
 }
 
-.vestidos {
+.contenedor-vestidos #carouselVestidos {
+  display: none;
+}
+.contenedor-vestidos .vestidos {
   height: 800px;
   display: grid;
   justify-content: space-around;
@@ -427,73 +498,101 @@ body .modal-content .modal-footer .btn-danger:hover {
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: 40% 15% 15%;
 }
-.vestidos a {
+.contenedor-vestidos .vestidos .img-hover-wrap {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  overflow: hidden;
   display: block;
 }
-.vestidos .img-cambio1 {
-  background-image: url(../img/vd-1.webp);
+.contenedor-vestidos .vestidos .img-hover-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+.contenedor-vestidos .vestidos .img-hover-wrap .img-normal {
+  opacity: 1;
+  z-index: 1;
+}
+.contenedor-vestidos .vestidos .img-hover-wrap .img-hover {
+  opacity: 0;
+  z-index: 2;
+}
+.contenedor-vestidos .vestidos .img-hover-wrap:hover .img-normal {
+  opacity: 0;
+}
+.contenedor-vestidos .vestidos .img-hover-wrap:hover .img-hover {
+  opacity: 1;
+}
+.contenedor-vestidos .vestidos a:nth-child(1) {
   grid-area: a;
 }
-.vestidos .img-cambio2 {
-  background-image: url(../img/vl-1.webp);
+.contenedor-vestidos .vestidos a:nth-child(2) {
   grid-area: b;
 }
-.vestidos .img-cambio3 {
-  background-image: url(../img/vs-1.webp);
+.contenedor-vestidos .vestidos a:nth-child(3) {
   grid-area: c;
 }
-.vestidos .img-cambio1:hover {
-  background-image: url(../img/vd-1cambio.webp);
-}
-.vestidos .img-cambio2:hover {
-  background-image: url(../img/vl-1cambio.webp);
-}
-.vestidos .img-cambio3:hover {
-  background-image: url(../img/vs-1cambio.webp);
-}
 
-.sinmangas {
+.contenedor-vestidos #carouselVestidos {
+  display: none;
+}
+.contenedor-vestidos .sinmangas {
   height: 800px;
   display: grid;
   justify-content: space-around;
-  grid-template-areas: "a2 b2 c2 " "a2 b2 c2 " "a2 b2 c2 ";
+  grid-template-areas: "a2 b2 c2" "a2 b2 c2" "a2 b2 c2";
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: 40% 15% 15%;
 }
-.sinmangas a {
+.contenedor-vestidos .sinmangas .img-hover-wrap {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  overflow: hidden;
   display: block;
 }
-.sinmangas .img2-cambio1 {
-  background-image: url(../img/ta2-1.webp);
+.contenedor-vestidos .sinmangas .img-hover-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+.contenedor-vestidos .sinmangas .img-hover-wrap .img-normal {
+  opacity: 1;
+  z-index: 1;
+}
+.contenedor-vestidos .sinmangas .img-hover-wrap .img-hover {
+  opacity: 0;
+  z-index: 2;
+}
+.contenedor-vestidos .sinmangas .img-hover-wrap:hover .img-normal {
+  opacity: 0;
+}
+.contenedor-vestidos .sinmangas .img-hover-wrap:hover .img-hover {
+  opacity: 1;
+}
+.contenedor-vestidos .sinmangas a:nth-child(1) {
   grid-area: a2;
 }
-.sinmangas .img2-cambio2 {
-  background-image: url(../img/tn-1.webp);
+.contenedor-vestidos .sinmangas a:nth-child(2) {
   grid-area: b2;
 }
-.sinmangas .img2-cambio3 {
-  background-image: url(../img/tr-1.webp);
+.contenedor-vestidos .sinmangas a:nth-child(3) {
   grid-area: c2;
 }
-.sinmangas .img2-cambio1:hover {
-  background-image: url(../img/ta2-1cambio.webp);
-}
-.sinmangas .img2-cambio2:hover {
-  background-image: url(../img/tn-1cambio.png);
-}
-.sinmangas .img2-cambio3:hover {
-  background-image: url(../img/tr-1cambio.png);
-}
 
-.basicos {
+.contenedor-vestidos #carouselVestidos {
+  display: none;
+}
+.contenedor-vestidos .basicos {
   height: 800px;
   display: grid;
   justify-content: space-around;
@@ -501,36 +600,50 @@ body .modal-content .modal-footer .btn-danger:hover {
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: 40% 15% 15%;
 }
-.basicos a {
+.contenedor-vestidos .basicos .img-hover-wrap {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  overflow: hidden;
   display: block;
 }
-.basicos .img3-cambio1 {
-  background-image: url(../img/ta-1.webp);
+.contenedor-vestidos .basicos .img-hover-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+.contenedor-vestidos .basicos .img-hover-wrap .img-normal {
+  opacity: 1;
+  z-index: 1;
+}
+.contenedor-vestidos .basicos .img-hover-wrap .img-hover {
+  opacity: 0;
+  z-index: 2;
+}
+.contenedor-vestidos .basicos .img-hover-wrap:hover .img-normal {
+  opacity: 0;
+}
+.contenedor-vestidos .basicos .img-hover-wrap:hover .img-hover {
+  opacity: 1;
+}
+.contenedor-vestidos .basicos a:nth-child(1) {
   grid-area: a3;
 }
-.basicos .img3-cambio2 {
-  background-image: url(../img/td-1.webp);
+.contenedor-vestidos .basicos a:nth-child(2) {
   grid-area: b3;
 }
-.basicos .img3-cambio3 {
-  background-image: url(../img/tm-1.webp);
+.contenedor-vestidos .basicos a:nth-child(3) {
   grid-area: c3;
 }
-.basicos .img3-cambio1:hover {
-  background-image: url(../img/ta-1cambio.png);
-}
-.basicos .img3-cambio2:hover {
-  background-image: url(../img/td-1cambio.png);
-}
-.basicos .img3-cambio3:hover {
-  background-image: url(../img/tm-1cambio.png);
-}
 
-.faldas {
+.contenedor-vestidos #carouselVestidos {
+  display: none;
+}
+.contenedor-vestidos .faldas {
   height: 800px;
   display: grid;
   justify-content: space-around;
@@ -538,33 +651,44 @@ body .modal-content .modal-footer .btn-danger:hover {
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: 40% 15% 15%;
 }
-.faldas a {
+.contenedor-vestidos .faldas .img-hover-wrap {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  overflow: hidden;
   display: block;
 }
-.faldas .img4-cambio1 {
-  background-image: url(../img/mc-1.webp);
+.contenedor-vestidos .faldas .img-hover-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+.contenedor-vestidos .faldas .img-hover-wrap .img-normal {
+  opacity: 1;
+  z-index: 1;
+}
+.contenedor-vestidos .faldas .img-hover-wrap .img-hover {
+  opacity: 0;
+  z-index: 2;
+}
+.contenedor-vestidos .faldas .img-hover-wrap:hover .img-normal {
+  opacity: 0;
+}
+.contenedor-vestidos .faldas .img-hover-wrap:hover .img-hover {
+  opacity: 1;
+}
+.contenedor-vestidos .faldas a:nth-child(1) {
   grid-area: a4;
 }
-.faldas .img4-cambio2 {
-  background-image: url(../img/fa-1.webp);
+.contenedor-vestidos .faldas a:nth-child(2) {
   grid-area: b4;
 }
-.faldas .img4-cambio3 {
-  background-image: url(../img/se-1.webp);
+.contenedor-vestidos .faldas a:nth-child(3) {
   grid-area: c4;
-}
-.faldas .img4-cambio1:hover {
-  background-image: url(../img/mc-1cambio.webp);
-}
-.faldas .img4-cambio2:hover {
-  background-image: url(../img/fa-1cambio.webp);
-}
-.faldas .img4-cambio3:hover {
-  background-image: url(../img/se-1cambio.webp);
 }
 
 section .vest {
@@ -617,7 +741,7 @@ section .vest .aside-vest .pvest button:hover {
 }
 
 /* ------ABOUT US------- */
-.grid-footer {
+#grid-footer {
   background-image: url(../img/fondo-brand.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -625,7 +749,7 @@ section .vest .aside-vest .pvest button:hover {
   background-attachment: fixed;
   min-height: 100vh;
 }
-.grid-footer section {
+#grid-footer section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -633,7 +757,7 @@ section .vest .aside-vest .pvest button:hover {
   text-align: center;
   min-height: 100vh;
 }
-.grid-footer section h1 {
+#grid-footer section h1 {
   background-color: rgba(110, 44, 114, 0.8);
   color: white;
   padding: 20px 40px;
@@ -642,10 +766,10 @@ section .vest .aside-vest .pvest button:hover {
   font-size: 2rem;
   font-family: "Metamorphous", serif;
 }
-.grid-footer section .img-about {
+#grid-footer section .img-about {
   width: 100%;
 }
-.grid-footer section .about {
+#grid-footer section .about {
   font-family: "Metamorphous", serif;
   font-size: 1.5em;
   text-align: center;
@@ -656,22 +780,22 @@ section .vest .aside-vest .pvest button:hover {
   border-radius: 10px;
   color: white;
 }
-.grid-footer section .about h2 {
+#grid-footer section .about h2 {
   color: #f98aff;
 }
 
 /* ---------CONTACT--------- */
-.grid-footer-contact {
+#grid-footer-contact {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-.grid-footer-contact main {
+#grid-footer-contact main {
   flex: 1;
   padding: 60px 20px 100px 20px;
   margin-bottom: 200px;
 }
-.grid-footer-contact main .main-contact {
+#grid-footer-contact main .main-contact {
   margin-bottom: 100px;
   display: flex;
   justify-content: center;
@@ -679,7 +803,7 @@ section .vest .aside-vest .pvest button:hover {
   gap: 3rem;
   flex-wrap: wrap;
 }
-.grid-footer-contact main .main-contact .imgatito {
+#grid-footer-contact main .main-contact .imgatito {
   max-width: 300px;
   width: 100%;
   height: auto;
@@ -702,7 +826,7 @@ section .vest .aside-vest .pvest button:hover {
     transform: translateY(0);
   }
 }
-.grid-footer-contact main .main-contact .right2 {
+#grid-footer-contact main .main-contact .right2 {
   max-width: 500px;
   width: 100%;
   padding: 20px;
@@ -711,38 +835,38 @@ section .vest .aside-vest .pvest button:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
   font-family: "Turret Road", sans-serif;
 }
-.grid-footer-contact main .main-contact .right2 h1 {
+#grid-footer-contact main .main-contact .right2 h1 {
   color: #b75dc5;
   font-weight: 700;
   margin-bottom: 10px;
   text-align: center;
 }
-.grid-footer-contact main .main-contact .right2 .parrafo {
+#grid-footer-contact main .main-contact .right2 .parrafo {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   color: #b75dc5;
   line-height: 1.6;
 }
-.grid-footer-contact main .main-contact .right2 .parrafo a {
+#grid-footer-contact main .main-contact .right2 .parrafo a {
   color: #9e3fa6;
   text-decoration: none;
   font-weight: bold;
 }
-.grid-footer-contact main .main-contact .right2 .parrafo a:hover {
+#grid-footer-contact main .main-contact .right2 .parrafo a:hover {
   text-decoration: underline;
 }
-.grid-footer-contact main .main-contact .right2 form {
+#grid-footer-contact main .main-contact .right2 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
   max-width: 500px;
 }
-.grid-footer-contact main .main-contact .right2 form label {
+#grid-footer-contact main .main-contact .right2 form label {
   font-weight: 500;
   color: #6e2c72;
 }
-.grid-footer-contact main .main-contact .right2 form input, .grid-footer-contact main .main-contact .right2 form select, .grid-footer-contact main .main-contact .right2 form textarea {
+#grid-footer-contact main .main-contact .right2 form input, #grid-footer-contact main .main-contact .right2 form select, #grid-footer-contact main .main-contact .right2 form textarea {
   padding: 10px;
   border: 2px solid #e4cce8;
   border-radius: 10px;
@@ -750,16 +874,16 @@ section .vest .aside-vest .pvest button:hover {
   font-size: 1rem;
   transition: 0.3s ease;
 }
-.grid-footer-contact main .main-contact .right2 form input:focus, .grid-footer-contact main .main-contact .right2 form select:focus, .grid-footer-contact main .main-contact .right2 form textarea:focus {
+#grid-footer-contact main .main-contact .right2 form input:focus, #grid-footer-contact main .main-contact .right2 form select:focus, #grid-footer-contact main .main-contact .right2 form textarea:focus {
   outline: none;
   border-color: #c96cd1;
   box-shadow: 0 0 5px rgba(201, 108, 209, 0.5);
 }
-.grid-footer-contact main .main-contact .right2 form textarea {
+#grid-footer-contact main .main-contact .right2 form textarea {
   resize: vertical;
   min-height: 100px;
 }
-.grid-footer-contact main .main-contact .right2 form input[type=submit] {
+#grid-footer-contact main .main-contact .right2 form input[type=submit] {
   background-color: #b75dc5;
   color: white;
   font-weight: bold;
@@ -768,10 +892,10 @@ section .vest .aside-vest .pvest button:hover {
   cursor: pointer;
   transition: 0.3s ease;
 }
-.grid-footer-contact main .main-contact .right2 form input[type=submit]:hover {
+#grid-footer-contact main .main-contact .right2 form input[type=submit]:hover {
   background-color: #9e3fa6;
 }
-.grid-footer-contact main .main-contact .right2 form input[type=checkbox] {
+#grid-footer-contact main .main-contact .right2 form input[type=checkbox] {
   width: auto;
   margin-left: 0.5rem;
 }
@@ -784,7 +908,8 @@ section .vest .aside-vest .pvest button:hover {
     display: grid;
     grid-template-areas: "header header header" "nav sec-ind sec-ind" "nav sec-des sec-des" "nav sec-des sec-des" "footer footer footer";
     grid-template-columns: 15% 40% 45%;
-    grid-template-rows: 1.5% 12% 30% 58% 25%;
+    grid-template-rows: 1.5% 15% 30% 53% 1fr;
+    overflow-y: visible;
   }
   #grid-index header {
     display: flex;
@@ -802,34 +927,42 @@ section .vest .aside-vest .pvest button:hover {
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: white;
+    background-color: rgb(225, 210, 231);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    overflow-y: auto;
   }
   #grid-index nav ul {
     padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: 15px;
+    height: 100%;
   }
   #grid-index nav ul li {
     display: flex;
     flex-direction: column;
+    gap: 40px;
   }
   #grid-index nav ul li .left {
     font-size: 12px;
     padding: 10px;
   }
-  #grid-index nav ul li .left .logo {
+  #grid-index nav ul li .left a img .logo {
     margin-top: 20px;
-    width: 50px;
   }
   #grid-index nav ul li button {
     margin-top: 10px;
     font-size: 10px;
+    padding: 20%;
   }
   #grid-index .section-index {
     grid-area: sec-ind;
+  }
+  #grid-index .section-index h1 {
+    font-size: 100%;
   }
   #grid-index .sect-dest {
     grid-area: sec-des;
@@ -849,33 +982,43 @@ section .vest .aside-vest .pvest button:hover {
 @media screen and (max-width: 425px) {
   #grid-index {
     display: grid;
-    grid-template-areas: " header    header    " " nav       nav       " " sec-ind   sec-ind   " " sec-des   sec-des   " " footer    footer    ";
+    grid-template-areas: "header header" "nav nav" "sec-ind sec-ind" "sec-des sec-des" "footer footer";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 0.5% 1.5% 4.6% 85% 15%;
+    grid-template-rows: 0.5% 1.5% 5% 80% 15%;
   }
   #grid-index header h3 {
     font-size: 10px;
     padding: 10px;
   }
   #grid-index nav {
-    position: sticky;
+    grid-area: nav;
+    width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
+    background-color: rgb(225, 210, 231);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
   #grid-index nav ul {
-    margin: 10px;
     display: flex;
     flex-direction: row;
-    padding: 0.5%;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
   }
   #grid-index nav ul li {
     display: flex;
     flex-direction: row;
-    padding-bottom: 0;
-    padding-top: 0;
-    font-size: 10px;
     align-items: center;
+    gap: 5px;
+  }
+  #grid-index nav ul li a {
+    font-size: 10px;
+    padding: 4px;
   }
   #grid-index nav ul li .logo {
     width: 40px;
@@ -883,13 +1026,14 @@ section .vest .aside-vest .pvest button:hover {
   }
   #grid-index nav ul li .btn {
     font-size: 10px;
+    padding: 2px 6px;
     margin: 0;
   }
   #grid-index .section-index {
     font-size: 0.7em;
   }
   #grid-index .section-index h1 {
-    margin-top: 10px;
+    margin-top: 20px;
   }
   #grid-index .sect-dest h4 {
     margin-bottom: 20px;
@@ -923,9 +1067,10 @@ section .vest .aside-vest .pvest button:hover {
 @media screen and (max-width: 768px) {
   #grid-shop {
     display: grid;
-    grid-template-areas: " header   header      " " nav      contenedor-collec    " " nav      contenedor-collec  " " footer      footer   ";
+    grid-template-areas: "header   header" "nav      contenedor-collec" "nav      contenedor-collec" "footer   footer";
     grid-template-columns: 15% 85%;
-    grid-template-rows: 2% 25% 72.5% 25%;
+    grid-template-rows: 2% 25% 72.5% 1fr;
+    overflow-y: visible;
   }
   #grid-shop header {
     display: flex;
@@ -943,41 +1088,47 @@ section .vest .aside-vest .pvest button:hover {
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: white;
+    background-color: rgb(225, 210, 231);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    overflow-y: auto;
   }
   #grid-shop nav ul {
     padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: 15px;
+    height: 100%;
   }
   #grid-shop nav ul li {
     display: flex;
     flex-direction: column;
+    gap: 40px;
   }
   #grid-shop nav ul li .left {
     font-size: 12px;
     padding: 10px;
   }
-  #grid-shop nav ul li .left .logo {
+  #grid-shop nav ul li .left a img .logo {
     margin-top: 20px;
-    width: 50px;
   }
   #grid-shop nav ul li button {
     margin-top: 10px;
     font-size: 10px;
+    padding: 20%;
   }
   #grid-shop .contenedor-collec {
     grid-area: contenedor-collec;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
   }
   #grid-shop .contenedor-collec .enlaces {
     display: grid;
-    grid-template-areas: "sinmangas   sinmangas" "basicos        faldas" "vestidos    vestidos";
+    grid-template-areas: "sinmangas sinmangas" "basicos   faldas" "vestidos  vestidos";
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 20% 50%;
     justify-content: center;
@@ -992,35 +1143,39 @@ section .vest .aside-vest .pvest button:hover {
     display: flex;
     flex-direction: column;
   }
-  #grid-shop header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
   #grid-shop header h3 {
     font-size: 10px;
-    padding: 5px;
+    padding: 10px;
   }
   #grid-shop nav {
-    position: sticky;
+    grid-area: nav;
+    width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
+    background-color: rgb(225, 210, 231);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
   #grid-shop nav ul {
-    margin: 10px;
     display: flex;
     flex-direction: row;
-    padding: 0.5%;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
   }
   #grid-shop nav ul li {
     display: flex;
     flex-direction: row;
-    padding-bottom: 0;
-    padding-top: 0;
-    font-size: 10px;
     align-items: center;
+    gap: 5px;
+  }
+  #grid-shop nav ul li a {
+    font-size: 10px;
+    padding: 4px;
   }
   #grid-shop nav ul li .logo {
     width: 40px;
@@ -1028,6 +1183,7 @@ section .vest .aside-vest .pvest button:hover {
   }
   #grid-shop nav ul li .btn {
     font-size: 10px;
+    padding: 2px 6px;
     margin: 0;
   }
   #grid-shop .contenedor-collec .enlaces {
@@ -1068,7 +1224,7 @@ section .vest .aside-vest .pvest button:hover {
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: white;
+    background-color: rgb(225, 210, 231);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   #grid-collections nav ul {
@@ -1086,24 +1242,36 @@ section .vest .aside-vest .pvest button:hover {
     font-size: 12px;
     padding: 10px;
   }
-  #grid-collections nav ul li .left .logo {
+  #grid-collections nav ul li .left a img .logo {
     margin-top: 20px;
-    width: 50px;
   }
   #grid-collections nav ul li button {
     margin-top: 10px;
     font-size: 10px;
+    padding: 20%;
   }
   #grid-collections .contenedor-vestidos {
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
     grid-area: cont;
   }
   #grid-collections .contenedor-vestidos h1 {
     text-align: center;
     margin-bottom: 2rem;
   }
+  #grid-collections .contenedor-vestidos #carouselVestidos {
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+  #grid-collections .contenedor-vestidos #carouselVestidos img {
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 8px;
+  }
   #grid-collections .contenedor-vestidos .vestidos {
-    display: flex;
-    flex-direction: column;
+    display: none;
     align-items: center;
     gap: 20px;
   }
@@ -1137,13 +1305,82 @@ section .vest .aside-vest .pvest button:hover {
 /*--------------sin mangas--------------*/
 /*-------------------------TABLET---------------------------*/
 @media screen and (max-width: 768px) {
-  .contenedor-vestidos .sinmangas {
+  #grid-collections {
+    display: grid;
+    grid-template-areas: "header header" "nav cont-ves" "footer footer";
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 3% 97% 1fr;
+    min-height: 100vh;
+  }
+  #grid-collections header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: header;
+  }
+  #grid-collections header h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+  }
+  #grid-collections nav {
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgb(225, 210, 231);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    overflow-y: auto;
+  }
+  #grid-collections nav ul {
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    font-size: 15px;
+    height: 100%;
+  }
+  #grid-collections nav ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  #grid-collections nav ul li .left {
+    font-size: 12px;
+    padding: 10px;
+  }
+  #grid-collections nav ul li .left a img .logo {
+    margin-top: 20px;
+  }
+  #grid-collections nav ul li button {
+    margin-top: 10px;
+    font-size: 10px;
+    padding: 20%;
+  }
+  #grid-collections .contenedor-vestidos {
+    grid-area: cont-ves;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  #grid-collections .contenedor-vestidos #carouselVestidos {
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+  #grid-collections .contenedor-vestidos #carouselVestidos img {
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  #grid-collections .contenedor-vestidos .sinmangas {
+    display: none;
     align-items: center;
     gap: 20px;
   }
-  .contenedor-vestidos .sinmangas a {
+  #grid-collections .contenedor-vestidos .sinmangas a {
     display: block;
     width: 90%;
     aspect-ratio: 3/4;
@@ -1151,13 +1388,31 @@ section .vest .aside-vest .pvest button:hover {
     background-position: center;
     transition: background-image 0.3s ease;
   }
+  #grid-collections footer {
+    grid-area: footer;
+  }
 }
 /*--------------basicos--------------*/
 /*-------------------------TABLET---------------------------*/
 @media screen and (max-width: 768px) {
+  .contenedor-vestidos {
+    grid-area: cont-ves;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .contenedor-vestidos #carouselVestidos {
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+  .contenedor-vestidos #carouselVestidos img {
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 8px;
+  }
   .contenedor-vestidos .basicos {
-    display: flex;
-    flex-direction: column;
+    display: none;
     align-items: center;
     gap: 20px;
   }
@@ -1173,9 +1428,24 @@ section .vest .aside-vest .pvest button:hover {
 /*--------------faldas--------------*/
 /*-------------------------TABLET---------------------------*/
 @media screen and (max-width: 768px) {
+  .contenedor-vestidos {
+    grid-area: cont-ves;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .contenedor-vestidos #carouselVestidos {
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+  .contenedor-vestidos #carouselVestidos img {
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 8px;
+  }
   .contenedor-vestidos .faldas {
-    display: flex;
-    flex-direction: column;
+    display: none;
     align-items: center;
     gap: 20px;
   }
@@ -1188,44 +1458,48 @@ section .vest .aside-vest .pvest button:hover {
     transition: background-image 0.3s ease;
   }
 }
+/* -------------collections (vestidos, faldas, basicos y sinmangas)--------------- */
 /*-------------------------MOBILE L---------------------------*/
 @media screen and (max-width: 425px) {
   #grid-collections {
     display: grid;
     grid-template-areas: "header header" "nav nav" "cont cont" "footer footer";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1.3% 3.9% 115% 38%;
-  }
-  #grid-collections header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    grid-template-rows: 1.3% 3.9% 55% 1fr;
   }
   #grid-collections header h3 {
     font-size: 10px;
-    padding: 5px;
-    margin: 0;
+    padding: 10px;
   }
   #grid-collections nav {
-    position: sticky;
+    grid-area: nav;
+    width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
+    background-color: rgb(225, 210, 231);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
   #grid-collections nav ul {
-    margin: 10px;
     display: flex;
     flex-direction: row;
-    padding: 0.5%;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
   #grid-collections nav ul li {
     display: flex;
     flex-direction: row;
-    padding-bottom: 0;
-    padding-top: 0;
-    font-size: 10px;
     align-items: center;
+    gap: 5px;
+  }
+  #grid-collections nav ul li a {
+    font-size: 10px;
+    padding: 4px;
   }
   #grid-collections nav ul li .logo {
     width: 40px;
@@ -1233,7 +1507,24 @@ section .vest .aside-vest .pvest button:hover {
   }
   #grid-collections nav ul li .btn {
     font-size: 10px;
+    padding: 2px 6px;
     margin: 0;
+  }
+  #grid-collections .contenedor-vestidos {
+    grid-area: cont;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  #grid-collections .contenedor-vestidos #carouselVestidos {
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+  #grid-collections .contenedor-vestidos #carouselVestidos img {
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 8px;
   }
   #grid-collections footer a {
     font-size: 15px;
@@ -1272,39 +1563,41 @@ section .vest .aside-vest .pvest button:hover {
     display: grid;
     grid-template-areas: "header    header" "nav       nav" "section1  section1" "footer    footer";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1% 2.8% 1fr 30%;
-  }
-  .grid-marcas header {
-    grid-area: header;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    grid-template-rows: 1% 3% 80% 1fr;
   }
   .grid-marcas header h3 {
     font-size: 10px;
-    padding: 5px;
-    margin: 0;
+    padding: 10px;
   }
   .grid-marcas nav {
-    position: sticky;
+    grid-area: nav;
+    width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
+    background-color: rgb(225, 210, 231);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
   .grid-marcas nav ul {
-    margin: 10px;
     display: flex;
     flex-direction: row;
-    padding: 0.5%;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
   }
   .grid-marcas nav ul li {
     display: flex;
     flex-direction: row;
-    padding-bottom: 0;
-    padding-top: 0;
-    font-size: 10px;
     align-items: center;
+    gap: 5px;
+  }
+  .grid-marcas nav ul li a {
+    font-size: 10px;
+    padding: 4px;
   }
   .grid-marcas nav ul li .logo {
     width: 40px;
@@ -1312,6 +1605,7 @@ section .vest .aside-vest .pvest button:hover {
   }
   .grid-marcas nav ul li .btn {
     font-size: 10px;
+    padding: 2px 6px;
     margin: 0;
   }
   .grid-marcas section {
@@ -1327,7 +1621,7 @@ section .vest .aside-vest .pvest button:hover {
     width: 100%;
     margin-top: 30%;
   }
-  .grid-marcas section .aside-vest {
+  .grid-marcas section .vest .aside-vest {
     margin: 0;
     width: 95%;
     position: relative;
@@ -1354,231 +1648,285 @@ section .vest .aside-vest .pvest button:hover {
 /* --------------about - contact - devolucion--------------- */
 /*-------------------------TABLET---------------------------*/
 @media screen and (max-width: 768px) {
-  .grid-footer {
+  #grid-footer {
     display: grid;
-    grid-template-areas: "header header  header" "nav main    main" "footer footer  footer";
+    grid-template-areas: "header header  header" "nav    main    main" "footer footer  footer";
     grid-template-columns: 15% 42% 43%;
-    grid-template-rows: 2% 97.5% 25%;
+    grid-template-rows: 2% 97.3% 1fr;
+    overflow-y: visible;
   }
-  .grid-footer header {
+  #grid-footer header {
     display: flex;
     align-items: center;
     justify-content: center;
     grid-area: header;
   }
-  .grid-footer header h3 {
+  #grid-footer header h3 {
     margin: 0;
     padding: 0;
     font-size: 12px;
   }
-  .grid-footer nav {
+  #grid-footer nav {
     grid-area: nav;
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: white;
+    background-color: rgb(225, 210, 231);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  .grid-footer nav ul {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
     justify-content: center;
-    font-size: 15px;
+    padding-right: 0;
+    padding-left: 0;
   }
-  .grid-footer nav ul li {
+  #grid-footer nav ul {
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    font-size: 15px;
+    height: 100%;
   }
-  .grid-footer nav ul li .left {
+  #grid-footer nav ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  #grid-footer nav ul li .left {
     font-size: 12px;
     padding: 10px;
   }
-  .grid-footer nav ul li .left .logo {
+  #grid-footer nav ul li .left a img .logo {
     margin-top: 20px;
-    width: 50px;
   }
-  .grid-footer nav ul li button {
+  #grid-footer nav ul li button {
     margin-top: 10px;
     font-size: 10px;
+    padding: 20%;
   }
-  .grid-footer main {
+  #grid-footer main {
     grid-area: main;
   }
-  .grid-footer-contact {
-    display: grid;
-    grid-template-areas: "header header  " "nav main    " "footer footer  ";
-    grid-template-columns: 15% 85%;
-    grid-template-rows: 3% 120% 42%;
+  #grid-footer main section h1 {
+    margin-top: 10px;
   }
-  .grid-footer-contact header {
+  #grid-footer main section .about {
+    margin-bottom: 0;
+    font-size: 1.4em;
+  }
+  #grid-footer footer {
+    grid-area: footer;
+  }
+  #grid-footer footer ul {
+    padding: 0;
+  }
+  #grid-footer-contact {
+    display: grid;
+    grid-template-areas: "header header" "nav    main" "footer footer";
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 3% 97% 1fr;
+    overflow-y: visible;
+  }
+  #grid-footer-contact header {
     display: flex;
     align-items: center;
     justify-content: center;
     grid-area: header;
   }
-  .grid-footer-contact header h3 {
+  #grid-footer-contact header h3 {
     margin: 0;
     padding: 0;
     font-size: 12px;
   }
-  .grid-footer-contact nav {
+  #grid-footer-contact nav {
+    margin: 0;
     grid-area: nav;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgb(225, 210, 231);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    overflow-y: auto;
   }
-  .grid-footer-contact nav ul {
+  #grid-footer-contact nav ul {
     padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: 15px;
-    position: relative;
+    height: 100%;
   }
-  .grid-footer-contact nav ul .left {
-    font-size: 12px;
+  #grid-footer-contact nav ul li {
     display: flex;
     flex-direction: column;
+    gap: 40px;
   }
-  .grid-footer-contact nav ul .left li {
+  #grid-footer-contact nav ul li .left {
+    font-size: 12px;
     padding: 10px;
   }
-  .grid-footer-contact nav ul .left li .logo {
+  #grid-footer-contact nav ul li .left a img .logo {
     margin-top: 20px;
-    width: 50px;
   }
-  .grid-footer-contact nav ul .right {
-    display: flex;
-    flex-direction: column;
+  #grid-footer-contact nav ul li button {
+    margin-top: 10px;
+    font-size: 10px;
+    padding: 20%;
   }
-  .grid-footer-contact nav ul .right .btn {
-    font-size: 11px;
+  #grid-footer-contact main {
+    grid-area: main;
+    padding: 0;
   }
-  .grid-footer-contact main .main-contact {
+  #grid-footer-contact main .main-contact {
+    margin: 0;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .grid-footer-contact main .main-contact .imgatito {
-    width: 50%;
-    height: 50%;
+  #grid-footer-contact main .main-contact .imgatito {
+    width: 30%;
+    height: 40%;
     margin: 0;
   }
-  footer {
+  #grid-footer-contact main .main-contact .right2 {
+    padding: 10px;
+  }
+  #grid-footer-contact footer {
     grid-area: footer;
   }
-  footer ul {
+  #grid-footer-contact footer ul {
     padding: 0;
   }
 }
 /*-------------------------MOBILE L--------------------------*/
 @media screen and (max-width: 425px) {
-  .grid-footer {
+  #grid-footer {
     display: grid;
     grid-template-areas: "header header  " "nav nav   " "main main" " footer  footer";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1% 4% 1fr 35%;
+    grid-template-rows: 1% 4% 70% 1fr;
   }
-  .grid-footer header {
-    font-size: 13px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .grid-footer header h3 {
+  #grid-footer header h3 {
     font-size: 10px;
     padding: 10px;
   }
-  .grid-footer nav {
-    position: sticky;
+  #grid-footer nav {
+    grid-area: nav;
+    width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
+    background-color: rgb(225, 210, 231);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
-  .grid-footer nav ul {
-    margin: 10px;
+  #grid-footer nav ul {
     display: flex;
     flex-direction: row;
-    padding: 0.5%;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
   }
-  .grid-footer nav ul li {
+  #grid-footer nav ul li {
     display: flex;
     flex-direction: row;
-    padding-bottom: 0;
-    padding-top: 0;
-    font-size: 10px;
     align-items: center;
+    gap: 5px;
   }
-  .grid-footer nav ul li .logo {
-    width: 20px;
-    margin: 0;
-  }
-  .grid-footer nav ul li .btn {
+  #grid-footer nav ul li a {
     font-size: 10px;
+    padding: 4px;
+  }
+  #grid-footer nav ul li .logo {
+    width: 40px;
     margin: 0;
   }
-  .grid-footer main section .about {
+  #grid-footer nav ul li .btn {
+    font-size: 10px;
+    padding: 2px 6px;
+    margin: 0;
+  }
+  #grid-footer main section .about {
     font-size: 1.2em;
     color: rgb(255, 255, 255);
   }
-  .grid-footer footer a {
+  #grid-footer footer a {
     font-size: 15px;
   }
-  .grid-footer footer .div-redes {
+  #grid-footer footer .div-redes {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
   }
-  .grid-footer footer .div-redes .redes {
+  #grid-footer footer .div-redes .redes {
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  .grid-footer footer .div-p {
+  #grid-footer footer .div-p {
     font-size: 10px;
   }
-  .grid-footer-contact {
+  #grid-footer-contact {
     display: grid;
     grid-template-areas: "header header  " "nav nav   " "main main" " footer  footer";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1.3% 4% 78% 45%;
+    grid-template-rows: 1.3% 4% 78% 1fr;
   }
-  .grid-footer-contact header h3 {
+  #grid-footer-contact header h3 {
     font-size: 10px;
-    padding: 5px;
+    padding: 10px;
   }
-  .grid-footer-contact nav {
-    position: sticky;
+  #grid-footer-contact nav {
+    grid-area: nav;
+    width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
+    background-color: rgb(225, 210, 231);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
-  .grid-footer-contact nav ul {
-    margin: 10px;
+  #grid-footer-contact nav ul {
     display: flex;
     flex-direction: row;
-    padding: 0.5%;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
   }
-  .grid-footer-contact nav ul li {
+  #grid-footer-contact nav ul li {
     display: flex;
     flex-direction: row;
-    padding-bottom: 0;
-    padding-top: 0;
-    font-size: 10px;
     align-items: center;
+    gap: 5px;
   }
-  .grid-footer-contact nav ul li .logo {
+  #grid-footer-contact nav ul li a {
+    font-size: 10px;
+    padding: 4px;
+  }
+  #grid-footer-contact nav ul li .logo {
     width: 40px;
     margin: 0;
   }
-  .grid-footer-contact nav ul li .btn {
+  #grid-footer-contact nav ul li .btn {
     font-size: 10px;
+    padding: 2px 6px;
     margin: 0;
   }
-  .grid-footer-contact main {
+  #grid-footer-contact main {
     grid-column: 1/3;
     width: 100%;
   }
-  .grid-footer-contact main .container .main-contact {
+  #grid-footer-contact main .container .main-contact {
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -1586,67 +1934,29 @@ section .vest .aside-vest .pvest button:hover {
     box-sizing: border-box;
     overflow-x: hidden;
   }
-  .grid-footer-contact main .container .main-contact .imgatito {
+  #grid-footer-contact main .container .main-contact .imgatito {
     width: 100%;
     height: auto;
   }
-  .grid-footer-contact main .container .main-contact .right2 {
+  #grid-footer-contact main .container .main-contact .right2 {
     width: 100%;
     text-align: center;
   }
-  .grid-footer-contact footer a {
+  #grid-footer-contact footer a {
     font-size: 15px;
   }
-  .grid-footer-contact footer .div-redes {
+  #grid-footer-contact footer .div-redes {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
   }
-  .grid-footer-contact footer .div-redes .redes {
+  #grid-footer-contact footer .div-redes .redes {
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  .grid-footer-contact footer .div-p {
+  #grid-footer-contact footer .div-p {
     font-size: 10px;
   }
-}
-/* Selector/estilos universales */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: rgb(241, 218, 255);
-  color: rgb(0, 0, 0);
-}
-body .container {
-  height: 100vh;
-}
-body .p-pages {
-  margin-top: 10px;
-  font-family: monospace;
-  font-size: 1.2em;
-  text-align: center;
-}
-body a {
-  text-decoration: none;
-  color: #f5a5cd;
-}
-body a:visited {
-  text-decoration: none;
-}
-body h1 {
-  text-align: center;
-  padding: 5%;
-  font-family: "Orbitron", sans-serif;
-  font-size: 1.5em;
-}
-body h2 {
-  font-family: "Almendra SC", serif;
-  color: #6a6b83;
-  font-size: 2em;
 }
 
 /*# sourceMappingURL=style.css.map */

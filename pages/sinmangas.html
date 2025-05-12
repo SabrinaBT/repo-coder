@@ -17,17 +17,17 @@
         <h3>ENVÍOS GRATIS EN COMPRAS SUPERIORES A $170.000</h3>
     </header>
     <nav>
-        <ul class="d-flex justify-content-between align-items-center">
-          <li class="left d-flex">
-            <a href="../index.html"><img class="logo" src="../img/logo.gif" alt="Logo de la página"></a>
-            <a href="shop.html">SHOP</a>
-            <a href="aboutus.html">BRAND</a>
-          </li>
-          <li class="right d-flex align-items-center">
-            <button class="btn btn-md clase-boton" data-bs-toggle="modal" data-bs-target="#mi-modal-1">Ingresá</button>
-            <button class="btn btn-md" data-bs-toggle="modal" data-bs-target="#mi-modal-2">Registrate</button>
-          </li>
-        </ul>
+          <ul class="d-flex justify-content-between align-items-center">
+            <li class="left d-flex">
+              <a href="../index.html"><img class="logo" src="../img/logo.gif" alt="Logo de la página"></a>
+              <a href="shop.html">SHOP</a>
+              <a href="aboutus.html">BRAND</a>
+            </li>
+            <li class="right d-flex align-items-center">
+              <button class="btn btn-md clase-boton" data-bs-toggle="modal" data-bs-target="#mi-modal-1">Ingresá</button>
+              <button class="btn btn-md" data-bs-toggle="modal" data-bs-target="#mi-modal-2">Registrate</button>
+            </li>
+          </ul>
     </nav>
     
     <div class="modal fade" id="mi-modal-1" tabindex="-1" aria-labelledby="label-modal-1" aria-hidden="true" data-bs-backdrop="static">
@@ -88,11 +88,45 @@
     <section class="contenedor-vestidos">
         <p class="p-pages">Inicio > <a href="shop.html"><strong>Shop </strong></a> > Top Sin Mangas</p>
         <h1>TOPS SIN MANGAS</h1>
+        <div id="carouselVestidos" class="carousel slide mt-4" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="ta2.html">
+                            <img src="../img/ta2-1.webp" class="d-block w-100" alt="Top ta2">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="tn.html">
+                            <img src="../img/tn-1.webp" class="d-block w-100" alt="Top tn">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="tr.html">
+                            <img src="../img/tr-1.webp" class="d-block w-100" alt="Top tr">
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselVestidos" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselVestidos" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+        </div>
         <div class="sinmangas">
-            <a class="img2-cambio1" href="ta2.html"></a> 
-            <a class="img2-cambio2" href="tn.html"></a>
-            <a class="img2-cambio3" href="tr.html"></a>
-        </div> 
+          <a href="ta2.html" class="img-hover-wrap">
+            <img src="../img/ta2-1.webp" class="img-normal" alt="Top ta2">
+            <img src="../img/ta2-1cambio.webp" class="img-hover" alt="Top ta2 cambio">
+          </a>
+          <a href="tn.html" class="img-hover-wrap">
+            <img src="../img/tn-1.webp" class="img-normal" alt="Top tn">
+            <img src="../img/tn-1cambio.png" class="img-hover" alt="Top tn cambio">
+          </a>
+          <a href="tr.html" class="img-hover-wrap">
+            <img src="../img/tr-1.webp" class="img-normal" alt="Top tr">
+            <img src="../img/tr-1cambio.png" class="img-hover" alt="Top tr cambio">
+          </a>
+        </div>
     </section>
 
     <footer>

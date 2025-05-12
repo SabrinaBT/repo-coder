@@ -22,7 +22,7 @@ body {
         font-size: 1.2em;
         text-align: center;
     }
-    a {
+    a { 
         text-decoration: none;
         color: #f5a5cd;    
     }
@@ -42,7 +42,40 @@ body {
         font-size: 2em;
     }
 }   
-//
+// index
+.section-index {
+    h1 {
+        font-family: "Orbitron", sans-serif;
+        font-size: 2.2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid #000000;
+        width: 0;
+        animation: escribir 4s steps(30, end) forwards, parpadeo 0.75s step-end infinite;
+        color: #ce7bbc;
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+}
+
+@keyframes escribir {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes parpadeo {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #8b8b8b;
+  }
+}
+
 
 @mixin img-destacados {
     width: 100%;

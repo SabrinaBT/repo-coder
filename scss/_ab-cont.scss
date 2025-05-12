@@ -1,5 +1,5 @@
 /* ------ABOUT US------- */
-.grid-footer {
+#grid-footer {
     background-image: url(../img/fondo-brand.jpg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -45,7 +45,7 @@
 
 /* ---------CONTACT--------- */
 
-.grid-footer-contact {
+#grid-footer-contact {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
