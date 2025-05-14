@@ -1,3 +1,4 @@
+//vestidos
 .contenedor-vestidos {
     #carouselVestidos {
         display: none;
@@ -14,41 +15,61 @@
         grid-template-rows: 40% 15% 15% ; 
     
         .img-hover-wrap {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-        display: block;
-    
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            transition: opacity 0.3s ease-in-out;
-        }
+            position: relative;
+            overflow: hidden;
+            display: block;
+            .hover-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 0.5rem 1rem;
+                border-radius: 10px;
+                font-size: 1rem;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                z-index: 3;
+                pointer-events: none;
+                text-align: center;
+            }
+
+            &:hover .hover-text {
+                opacity: 1;
+            }
     
-        .img-normal {
-            opacity: 1;
-            z-index: 1;
-        }
-    
-        .img-hover {
-            opacity: 0;
-            z-index: 2;
-        }
-    
-        &:hover {
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: opacity 0.3s ease-in-out;
+            }
+        
             .img-normal {
-            opacity: 0;
+                opacity: 1;
+                z-index: 1;
             }
-    
+        
             .img-hover {
-            opacity: 1;
+                opacity: 0;
+                z-index: 2;
             }
-        }
+        
+            &:hover {
+                .img-normal {
+                opacity: 0;
+                }
+        
+                .img-hover {
+                opacity: 1;
+                }
+            }
         }
     
         a:nth-child(1) {
@@ -65,6 +86,7 @@
     }
 }
 
+//sin mangas
 .contenedor-vestidos {
     #carouselVestidos {
         display: none;
@@ -86,6 +108,26 @@
         position: relative;
         overflow: hidden;
         display: block;
+        .hover-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 0.5rem 1rem;
+                border-radius: 10px;
+                font-size: 1rem;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                z-index: 3;
+                pointer-events: none;
+                text-align: center;
+            }
+
+            &:hover .hover-text {
+                opacity: 1;
+            }
     
         img {
             position: absolute;
@@ -132,6 +174,7 @@
     }
 }
 
+//basicos
 .contenedor-vestidos {
     #carouselVestidos {
         display: none;
@@ -152,6 +195,26 @@
         position: relative;
         overflow: hidden;
         display: block;
+        .hover-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            font-size: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 3;
+            pointer-events: none;
+            text-align: center;
+        }
+
+        &:hover .hover-text {
+            opacity: 1;
+        }
     
         img {
             position: absolute;
@@ -198,6 +261,7 @@
     } 
 }
 
+//faldas
 .contenedor-vestidos {
     #carouselVestidos {
         display: none;
@@ -218,6 +282,26 @@
         position: relative;
         overflow: hidden;
         display: block;
+        .hover-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 0.5rem 1rem;
+                border-radius: 10px;
+                font-size: 1rem;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                z-index: 3;
+                pointer-events: none;
+                text-align: center;
+            }
+
+            &:hover .hover-text {
+                opacity: 1;
+            }
     
         img {
             position: absolute;

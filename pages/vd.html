@@ -13,21 +13,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Metamorphous&display=swap" rel="stylesheet">
     <title>KOSMOS - Vestido Darcy</title>
 </head>
-<body class="grid-marcas">
+<body id="grid-marcas">
     <header>
         <h3>ENVÍOS GRATIS EN COMPRAS SUPERIORES A $170.000</h3>
     </header>
-    <nav>
+   <nav class="navbar navbar-expand-lg navbar-mobile-only">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img class="logo" src="../img/logo.gif" alt="Logo de la página"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContenido">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">Brand</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-sm clase-boton me-2" data-bs-toggle="modal" data-bs-target="#mi-modal-1">Ingresá</button>
+                        <button class="btn btn-sm" data-bs-toggle="modal" data-bs-target="#mi-modal-2">Registrate</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar-desktop-only">
         <ul class="d-flex justify-content-between align-items-center">
-          <li class="left d-flex">
-            <a href="../index.html"><img class="logo" src="../img/logo.gif" alt="Logo de la página"></a>
-            <a href="shop.html">SHOP</a>
-            <a href="aboutus.html">BRAND</a>
-          </li>
-          <li class="right d-flex align-items-center">
-            <button class="btn btn-md clase-boton" data-bs-toggle="modal" data-bs-target="#mi-modal-1">Ingresá</button>
-            <button class="btn btn-md" data-bs-toggle="modal" data-bs-target="#mi-modal-2">Registrate</button>
-          </li>
+            <li class="left d-flex">
+                <a href="../index.html"><img class="logo" src="../img/logo.gif" alt="Logo de la página"></a>
+                <a href="shop.html">SHOP</a>
+                <a href="aboutus.html">BRAND</a>
+            </li>
+            <li class="right d-flex align-items-center">
+                <button class="btn btn-md clase-boton" data-bs-toggle="modal" data-bs-target="#mi-modal-1">Ingresá</button>
+                <button class="btn btn-md" data-bs-toggle="modal" data-bs-target="#mi-modal-2">Registrate</button>
+            </li>
         </ul>
     </nav>
     
@@ -84,7 +107,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
 
     <section>
         <p class="p-pages">Inicio > Shop > <a href="vestidos.html"><strong>Vestidos</strong></a> > Vestidos Darcy</p>
@@ -116,8 +139,6 @@
             </aside>
         </div>
     </section>
-
-
     <footer>
         <ul>
             <li class="footer"> <a href="aboutus.html">ABOUT US</a> </li>

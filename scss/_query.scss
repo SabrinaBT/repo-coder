@@ -93,7 +93,7 @@ $fondo-nav: rgb(225, 210, 231);
             "img5 img6"   
             "img7 img8";
           grid-template-columns: 50% 50%;
-          grid-template-rows: 30% 30% 30% 30%;
+          grid-template-rows: 30% 30% 30% 1fr;
           justify-content: center;
         }
       }
@@ -104,71 +104,80 @@ $fondo-nav: rgb(225, 210, 231);
     }
 }
 
-
 /*-------------------------MOBILE L---------------------------*/
+/*------ VISIBILIDAD POR DEFECTO (escritorio y pantallas más grandes) ------*/
+.navbar-mobile-only {
+  display: none;
+}
+
+.navbar-desktop-only {
+  display: block;
+}
+
+/*----- MEDIA QUERY MOBILE L (máx. 425px) -----*/
 @media screen and (max-width: 425px) {
+  .navbar-mobile-only {
+    display: block;
+  }
+
+  .navbar-desktop-only {
+    display: none;
+  }
+
   #grid-index {
-    display: grid;
-    grid-template-areas: 
-      "header header"
-      "nav nav"
-      "sec-ind sec-ind"
-      "sec-des sec-des"
-      "footer footer";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 0.5% 1.5% 5% 80% 15%;
+      display: flex;
+      flex-direction: column;
 
-    header {
-      h3 {
-        font-size: 10px;
-        padding: 10px;
-      }
-    }
-
-    nav {
-      grid-area: nav;
-      width: 100%;
-      height: auto;
-      margin: 0;
-      padding: 0;
-      background-color: $fondo-nav;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-
-      ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        margin: 10px 0;
-        padding: 0;
-
-        li {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          gap: 5px;
-
-          a {
-            font-size: 10px;
-            padding: 4px;
-          }
-
-          .logo {
-            width: 40px;
-            margin: 0;
-          }
-
-          .btn {
-            font-size: 10px;
-            padding: 2px 6px;
-            margin: 0;
-          }
+      header {
+        h3 {
+          font-size: 10px;
+          padding: 10px;
         }
       }
-    }
+
+      nav {
+        grid-area: nav;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        position: sticky;
+        top: 0;
+        .container-fluid {
+          a {
+            .logo {
+              width: 40px;
+              border-radius: 10px;
+            }
+          }
+          div {
+            ul {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              margin: 0;
+              padding: 0;
+
+              li {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                a {
+                  font-size: 10px;
+                  padding: 4px;
+                }
+              }
+              .btn {
+                font-size: 10px;
+                padding: 2px 6px;
+                margin: 0;
+                color: rgb(228, 112, 193);
+              }
+            }
+          }     
+        }
+      }
 
     .section-index {
       font-size: 0.7em;
@@ -328,46 +337,45 @@ $fondo-nav: rgb(225, 210, 231);
 
       nav {
         grid-area: nav;
-        width: 100%;
         height: auto;
         margin: 0;
         padding: 0;
-        background-color: $fondo-nav;
         position: sticky;
         top: 0;
-        z-index: 1000;
-
-        ul {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          width: 100%;
-          margin: 10px 0;
-          padding: 0;
-
-          li {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 5px;
-
-            a {
-              font-size: 10px;
-              padding: 4px;
-            }
-
+        .container-fluid {
+          a {
             .logo {
               width: 40px;
-              margin: 0;
-            }
-
-            .btn {
-              font-size: 10px;
-              padding: 2px 6px;
-              margin: 0;
+              border-radius: 10px;
             }
           }
+          div {
+            ul {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              margin: 0;
+              padding: 0;
+
+              li {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                a {
+                  font-size: 10px;
+                  padding: 4px;
+                }
+              }
+              .btn {
+                font-size: 10px;
+                padding: 2px 6px;
+                margin: 0;
+                color: rgb(228, 112, 193);
+              }
+            }
+          }     
         }
       }
         .contenedor-collec {
@@ -697,68 +705,61 @@ $fondo-nav: rgb(225, 210, 231);
 /*-------------------------MOBILE L---------------------------*/
 @media screen and (max-width:425px) {
     #grid-collections {
-        display: grid;
-        grid-template-areas: 
-        "header header"
-        "nav nav"
-        "cont cont"
-        "footer footer";
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 1.3% 3.9% 55% 1fr;
-        header {
-          h3 {
-            font-size: 10px;
-            padding: 10px;
-          }
+      display: flex;
+      flex-direction: column;
+
+      header {
+        h3 {
+          font-size: 10px;
+          padding: 10px;
         }
+      }
 
       nav {
         grid-area: nav;
-        width: 100%;
         height: auto;
         margin: 0;
         padding: 0;
-        background-color: $fondo-nav;
         position: sticky;
         top: 0;
-        z-index: 1000;
-
-        ul {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          width: 100%;
-          margin: 0;
-          padding: 0;
-
-          li {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 5px;
-
-            a {
-              font-size: 10px;
-              padding: 4px;
-            }
-
+        .container-fluid {
+          a {
             .logo {
               width: 40px;
-              margin: 0;
-            }
-
-            .btn {
-              font-size: 10px;
-              padding: 2px 6px;
-              margin: 0;
+              border-radius: 10px;
             }
           }
+          div {
+            ul {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              margin: 0;
+              padding: 0;
+
+              li {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                a {
+                  font-size: 10px;
+                  padding: 4px;
+                }
+              }
+              .btn {
+                font-size: 10px;
+                padding: 2px 6px;
+                margin: 0;
+                color: rgb(228, 112, 193);
+              }
+            }
+          }     
         }
       }
 
       .contenedor-vestidos {
-          grid-area: cont;
           padding: 0 10px;
           align-items: center;
           justify-content: center;
@@ -798,7 +799,8 @@ $fondo-nav: rgb(225, 210, 231);
 /* --------------marcas--------------- */
 /*-------------------------TABLET---------------------------*/
 @media screen and (max-width:768px) {
-    .grid-marcas {
+    #grid-marcas {
+      
         .vest {
             div {
                 width: 70%;
@@ -819,68 +821,67 @@ $fondo-nav: rgb(225, 210, 231);
 
 /*-------------------------MOBILE L---------------------------*/
 @media screen and (max-width:425px) {
-    .grid-marcas {
-        display: grid;
-        grid-template-areas: 
-        "header    header"
-        "nav       nav"
-        "section1  section1"
-        "footer    footer";
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 1% 3% 80% 1fr;
+    #grid-marcas {
+        display: flex;
+        flex-direction: column;
         header {
-          h3 {
-            font-size: 10px;
-            padding: 10px;
-          }
+        h3 {
+          font-size: 10px;
+          padding: 10px;
         }
+      }
 
       nav {
         grid-area: nav;
-        width: 100%;
         height: auto;
         margin: 0;
         padding: 0;
-        background-color: $fondo-nav;
         position: sticky;
         top: 0;
-        z-index: 1000;
-
-        ul {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          width: 100%;
-          margin: 10px 0;
-          padding: 0;
-
-          li {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 5px;
-
-            a {
-              font-size: 10px;
-              padding: 4px;
-            }
-
+        background-color: $fondo-nav;
+        .container-fluid {
+          a {
             .logo {
               width: 40px;
-              margin: 0;
-            }
-
-            .btn {
-              font-size: 10px;
-              padding: 2px 6px;
-              margin: 0;
+              border-radius: 10px;
             }
           }
+          div {
+            ul {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              margin: 0;
+              padding: 0;
+
+              li {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 50px;
+                a {
+                  font-size: 10px;
+                  padding: 4px;
+                }
+              }
+              .btn {
+                font-size: 10px;
+                padding: 2px 6px;
+                margin: 0;
+                color: rgb(228, 112, 193);
+              }
+            }
+          }     
         }
       }
         section {
             grid-area: section1;
+            .p-pages {
+              margin-bottom: 0;
+              padding: 10px;
+            }
             .vest {
                 display: flex;
                 flex-direction: column-reverse;
@@ -919,7 +920,7 @@ $fondo-nav: rgb(225, 210, 231);
     }
 }
 
-/* --------------about - contact - devolucion--------------- */
+/* --------------about--------------- */
 /*-------------------------TABLET---------------------------*/
 @media screen and (max-width: 768px) {
     #grid-footer {
@@ -929,7 +930,7 @@ $fondo-nav: rgb(225, 210, 231);
         "nav    main    main"
         "footer footer  footer";
       grid-template-columns: 15% 42% 43%;
-      grid-template-rows: 2% 97.3% 1fr;
+      grid-template-rows: 2% 97.5% 1fr;
       overflow-y: visible;
   
       header {
@@ -996,7 +997,7 @@ $fondo-nav: rgb(225, 210, 231);
   
       main {
         grid-area: main;
-        section {
+        height: 85%;
             h1 {
                 margin-top: 10px;
             }
@@ -1004,7 +1005,7 @@ $fondo-nav: rgb(225, 210, 231);
                 margin-bottom: 0;
                 font-size: 1.4em;
             }
-        }
+        
       }
   
       footer {
@@ -1015,7 +1016,103 @@ $fondo-nav: rgb(225, 210, 231);
         }
       }
     }
-  
+}
+
+/*-------------------------MOBILE L--------------------------*/
+@media screen and (max-width:425px) {
+    #grid-footer {
+        display: grid;
+        grid-template-areas: 
+        "header header  "
+        "nav nav   "
+        "main main"
+        " footer  footer";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1.5% 3% 70% 1fr;
+        header {
+          h3 {
+            font-size: 10px;
+          }
+        }
+
+      nav {
+        grid-area: nav;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        position: sticky;
+        top: 0;
+        .container-fluid {
+          a {
+            .logo {
+              width: 40px;
+              border-radius: 10px;
+            }
+          }
+          div {
+            ul {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              margin: 0;
+              padding: 0;
+
+              li {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                a {
+                  font-size: 10px;
+                  padding: 4px;
+                }
+              }
+              .btn {
+                font-size: 10px;
+                padding: 2px 6px;
+                margin: 0;
+                color: rgb(228, 112, 193);
+              }
+            }
+          }     
+        }
+      }
+        main {
+          h1 {
+            margin-top: 30%;
+            font-size: 1.5em;
+          }
+          .about {      
+            font-size: 1.2em;
+            color: rgb(255, 255, 255);        
+          }
+        }
+
+        footer {
+            a {
+                font-size: 15px;
+            }
+            .div-redes {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+                .redes {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    
+                }
+            }
+            .div-p {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+/* --------------contact--------------- */
+/*-------------------------TABLET---------------------------*/
+@media screen and (max-width: 768px) {
     #grid-footer-contact {
       display: grid;
       grid-template-areas:
@@ -1025,7 +1122,7 @@ $fondo-nav: rgb(225, 210, 231);
       grid-template-columns: 15% 85%;
       grid-template-rows: 3% 97% 1fr;
       overflow-y: visible;
-  
+
       header {
         display: flex;
         align-items: center;
@@ -1088,7 +1185,10 @@ $fondo-nav: rgb(225, 210, 231);
       main {
         grid-area: main;
         padding: 0;
-        .main-contact {
+
+        .container {
+          height: 100%;
+          .main-contact {
             margin: 0;
             margin-top: 20px;
             display: flex;
@@ -1097,14 +1197,17 @@ $fondo-nav: rgb(225, 210, 231);
             justify-content: center;
   
             .imgatito {
-                width: 30%;
-                height: 40%;
+                width: 100%;
+                height: auto;
                 margin: 0;
             }
             .right2 {
                 padding: 10px;
+
             }
         }
+        }
+        
       }
   
       footer {
@@ -1119,162 +1222,67 @@ $fondo-nav: rgb(225, 210, 231);
 
 /*-------------------------MOBILE L--------------------------*/
 @media screen and (max-width:425px) {
-    #grid-footer {
-        display: grid;
-        grid-template-areas: 
-        "header header  "
-        "nav nav   "
-        "main main"
-        " footer  footer";
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 1% 4% 70% 1fr;
-        header {
-          h3 {
-            font-size: 10px;
-            padding: 10px;
-          }
-        }
-
-      nav {
-        grid-area: nav;
-        width: 100%;
-        height: auto;
-        margin: 0;
-        padding: 0;
-        background-color: $fondo-nav;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-
-        ul {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          width: 100%;
-          margin: 10px 0;
-          padding: 0;
-
-          li {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 5px;
-
-            a {
-              font-size: 10px;
-              padding: 4px;
-            }
-
-            .logo {
-              width: 40px;
-              margin: 0;
-            }
-
-            .btn {
-              font-size: 10px;
-              padding: 2px 6px;
-              margin: 0;
-            }
-          }
-        }
-      }
-        main {
-            section {
-                .about {
-                   
-                    font-size: 1.2em;
-                    color: rgb(255, 255, 255);
-                    
-                }
-            }
-        }
-
-        footer {
-            a {
-                font-size: 15px;
-            }
-            .div-redes {
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 20px;
-                .redes {
-                    margin-top: 30px;
-                    margin-bottom: 30px;
-                    
-                }
-            }
-            .div-p {
-                font-size: 10px;
-            }
-        }
-    }
-
-
     #grid-footer-contact {
-        display: grid;
-        grid-template-areas: 
-        "header header  "
-        "nav nav   "
-        "main main"
-        " footer  footer";
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 1.3% 4% 78% 1fr;
-        header {
-          h3 {
-            font-size: 10px;
-            padding: 10px;
-          }
+        display: flex;
+      flex-direction: column;
+
+      header {
+        h3 {
+          font-size: 10px;
+          padding: 10px;
         }
+      }
 
       nav {
         grid-area: nav;
-        width: 100%;
         height: auto;
         margin: 0;
         padding: 0;
-        background-color: $fondo-nav;
         position: sticky;
         top: 0;
-        z-index: 1000;
-
-        ul {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          width: 100%;
-          margin: 10px 0;
-          padding: 0;
-
-          li {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 5px;
-
-            a {
-              font-size: 10px;
-              padding: 4px;
-            }
-
+        .container-fluid {
+          a {
             .logo {
               width: 40px;
-              margin: 0;
-            }
-
-            .btn {
-              font-size: 10px;
-              padding: 2px 6px;
-              margin: 0;
+              border-radius: 10px;
             }
           }
+          div {
+            ul {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              margin: 0;
+              padding: 0;
+
+              li {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                a {
+                  font-size: 10px;
+                  padding: 4px;
+                }
+              }
+              .btn {
+                font-size: 10px;
+                padding: 2px 6px;
+                margin: 0;
+                color: rgb(228, 112, 193);
+              }
+            }
+          }     
         }
       }
+
         main {
             grid-column: 1 / 3; 
-            width: 100%;        
+            width: 100%; 
+            height: 100%;       
             .container {
+              height: 100%;
                 .main-contact {
                     flex-direction: column;
                     align-items: center;

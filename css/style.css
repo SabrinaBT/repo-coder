@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Selector/estilos universales */
 * {
   margin: 0;
@@ -505,6 +506,25 @@ body .modal-content .modal-footer .btn-danger:hover {
   overflow: hidden;
   display: block;
 }
+.contenedor-vestidos .vestidos .img-hover-wrap .hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 3;
+  pointer-events: none;
+  text-align: center;
+}
+.contenedor-vestidos .vestidos .img-hover-wrap:hover .hover-text {
+  opacity: 1;
+}
 .contenedor-vestidos .vestidos .img-hover-wrap img {
   position: absolute;
   top: 0;
@@ -555,6 +575,25 @@ body .modal-content .modal-footer .btn-danger:hover {
   position: relative;
   overflow: hidden;
   display: block;
+}
+.contenedor-vestidos .sinmangas .img-hover-wrap .hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 3;
+  pointer-events: none;
+  text-align: center;
+}
+.contenedor-vestidos .sinmangas .img-hover-wrap:hover .hover-text {
+  opacity: 1;
 }
 .contenedor-vestidos .sinmangas .img-hover-wrap img {
   position: absolute;
@@ -607,6 +646,25 @@ body .modal-content .modal-footer .btn-danger:hover {
   overflow: hidden;
   display: block;
 }
+.contenedor-vestidos .basicos .img-hover-wrap .hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 3;
+  pointer-events: none;
+  text-align: center;
+}
+.contenedor-vestidos .basicos .img-hover-wrap:hover .hover-text {
+  opacity: 1;
+}
 .contenedor-vestidos .basicos .img-hover-wrap img {
   position: absolute;
   top: 0;
@@ -658,6 +716,25 @@ body .modal-content .modal-footer .btn-danger:hover {
   overflow: hidden;
   display: block;
 }
+.contenedor-vestidos .faldas .img-hover-wrap .hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 3;
+  pointer-events: none;
+  text-align: center;
+}
+.contenedor-vestidos .faldas .img-hover-wrap:hover .hover-text {
+  opacity: 1;
+}
 .contenedor-vestidos .faldas .img-hover-wrap img {
   position: absolute;
   top: 0;
@@ -691,23 +768,23 @@ body .modal-content .modal-footer .btn-danger:hover {
   grid-area: c4;
 }
 
-section .vest {
+#grid-marcas section .vest {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 70px;
   width: 100%;
 }
-section .vest .image-container {
+#grid-marcas section .vest .image-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-section .vest .image-container img {
+#grid-marcas section .vest .image-container img {
   width: 90%;
   margin-bottom: 20px;
 }
-section .vest .aside-vest {
+#grid-marcas section .vest .aside-vest {
   margin-right: 50px;
   width: 50%;
   background-color: #e7e7f5;
@@ -718,13 +795,13 @@ section .vest .aside-vest {
   height: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-section .vest .aside-vest .h1-vest {
+#grid-marcas section .vest .aside-vest .h1-vest {
   font-size: 2em;
 }
-section .vest .aside-vest .pvest {
+#grid-marcas section .vest .aside-vest .pvest {
   font-family: "Metamorphous", serif;
 }
-section .vest .aside-vest .pvest button {
+#grid-marcas section .vest .aside-vest .pvest button {
   padding: 10px 20px;
   background-color: #000000;
   color: white;
@@ -734,7 +811,7 @@ section .vest .aside-vest .pvest button {
   font-family: "Jura", sans-serif;
   transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
-section .vest .aside-vest .pvest button:hover {
+#grid-marcas section .vest .aside-vest .pvest button:hover {
   background-color: white;
   color: black;
   border: 1px solid black;
@@ -749,7 +826,7 @@ section .vest .aside-vest .pvest button:hover {
   background-attachment: fixed;
   min-height: 100vh;
 }
-#grid-footer section {
+#grid-footer main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -757,7 +834,7 @@ section .vest .aside-vest .pvest button:hover {
   text-align: center;
   min-height: 100vh;
 }
-#grid-footer section h1 {
+#grid-footer main h1 {
   background-color: rgba(110, 44, 114, 0.8);
   color: white;
   padding: 20px 40px;
@@ -765,22 +842,42 @@ section .vest .aside-vest .pvest button:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   font-size: 2rem;
   font-family: "Metamorphous", serif;
+  animation: zoomFadeRotate 1.6s ease-out forwards;
+  opacity: 0;
+  transform: scale(0.5) rotate(-5deg);
+  transition: all 0.4s ease;
 }
-#grid-footer section .img-about {
+#grid-footer main h1:hover {
+  background-color: rgba(255, 174, 255, 0.9);
+  color: #6e2c72;
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.7);
+  cursor: default;
+}
+@keyframes zoomFadeRotate {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+#grid-footer main .img-about {
   width: 100%;
 }
-#grid-footer section .about {
+#grid-footer main .about {
   font-family: "Metamorphous", serif;
   font-size: 1.5em;
   text-align: center;
-  margin-top: 5%;
-  margin-bottom: 30px;
+  margin: 4%;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
   color: white;
 }
-#grid-footer section .about h2 {
+#grid-footer main .about h2 {
   color: #f98aff;
 }
 
@@ -971,7 +1068,7 @@ section .vest .aside-vest .pvest button:hover {
     display: grid;
     grid-template-areas: "img1 img2" "img3 img4" "img5 img6" "img7 img8";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 30% 30% 30% 30%;
+    grid-template-rows: 30% 30% 30% 1fr;
     justify-content: center;
   }
   #grid-index footer {
@@ -979,12 +1076,26 @@ section .vest .aside-vest .pvest button:hover {
   }
 }
 /*-------------------------MOBILE L---------------------------*/
+/*------ VISIBILIDAD POR DEFECTO (escritorio y pantallas más grandes) ------*/
+.navbar-mobile-only {
+  display: none;
+}
+
+.navbar-desktop-only {
+  display: block;
+}
+
+/*----- MEDIA QUERY MOBILE L (máx. 425px) -----*/
 @media screen and (max-width: 425px) {
+  .navbar-mobile-only {
+    display: block;
+  }
+  .navbar-desktop-only {
+    display: none;
+  }
   #grid-index {
-    display: grid;
-    grid-template-areas: "header header" "nav nav" "sec-ind sec-ind" "sec-des sec-des" "footer footer";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 0.5% 1.5% 5% 80% 15%;
+    display: flex;
+    flex-direction: column;
   }
   #grid-index header h3 {
     font-size: 10px;
@@ -992,42 +1103,39 @@ section .vest .aside-vest .pvest button:hover {
   }
   #grid-index nav {
     grid-area: nav;
-    width: 100%;
     height: auto;
     margin: 0;
     padding: 0;
-    background-color: rgb(225, 210, 231);
     position: sticky;
     top: 0;
-    z-index: 1000;
   }
-  #grid-index nav ul {
+  #grid-index nav .container-fluid a .logo {
+    width: 40px;
+    border-radius: 10px;
+  }
+  #grid-index nav .container-fluid div ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 10px 0;
+    margin: 0;
     padding: 0;
   }
-  #grid-index nav ul li {
+  #grid-index nav .container-fluid div ul li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px;
   }
-  #grid-index nav ul li a {
+  #grid-index nav .container-fluid div ul li a {
     font-size: 10px;
     padding: 4px;
   }
-  #grid-index nav ul li .logo {
-    width: 40px;
-    margin: 0;
-  }
-  #grid-index nav ul li .btn {
+  #grid-index nav .container-fluid div ul .btn {
     font-size: 10px;
     padding: 2px 6px;
     margin: 0;
+    color: rgb(228, 112, 193);
   }
   #grid-index .section-index {
     font-size: 0.7em;
@@ -1149,42 +1257,39 @@ section .vest .aside-vest .pvest button:hover {
   }
   #grid-shop nav {
     grid-area: nav;
-    width: 100%;
     height: auto;
     margin: 0;
     padding: 0;
-    background-color: rgb(225, 210, 231);
     position: sticky;
     top: 0;
-    z-index: 1000;
   }
-  #grid-shop nav ul {
+  #grid-shop nav .container-fluid a .logo {
+    width: 40px;
+    border-radius: 10px;
+  }
+  #grid-shop nav .container-fluid div ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 10px 0;
+    margin: 0;
     padding: 0;
   }
-  #grid-shop nav ul li {
+  #grid-shop nav .container-fluid div ul li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px;
   }
-  #grid-shop nav ul li a {
+  #grid-shop nav .container-fluid div ul li a {
     font-size: 10px;
     padding: 4px;
   }
-  #grid-shop nav ul li .logo {
-    width: 40px;
-    margin: 0;
-  }
-  #grid-shop nav ul li .btn {
+  #grid-shop nav .container-fluid div ul .btn {
     font-size: 10px;
     padding: 2px 6px;
     margin: 0;
+    color: rgb(228, 112, 193);
   }
   #grid-shop .contenedor-collec .enlaces {
     display: flex;
@@ -1462,10 +1567,8 @@ section .vest .aside-vest .pvest button:hover {
 /*-------------------------MOBILE L---------------------------*/
 @media screen and (max-width: 425px) {
   #grid-collections {
-    display: grid;
-    grid-template-areas: "header header" "nav nav" "cont cont" "footer footer";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1.3% 3.9% 55% 1fr;
+    display: flex;
+    flex-direction: column;
   }
   #grid-collections header h3 {
     font-size: 10px;
@@ -1473,16 +1576,17 @@ section .vest .aside-vest .pvest button:hover {
   }
   #grid-collections nav {
     grid-area: nav;
-    width: 100%;
     height: auto;
     margin: 0;
     padding: 0;
-    background-color: rgb(225, 210, 231);
     position: sticky;
     top: 0;
-    z-index: 1000;
   }
-  #grid-collections nav ul {
+  #grid-collections nav .container-fluid a .logo {
+    width: 40px;
+    border-radius: 10px;
+  }
+  #grid-collections nav .container-fluid div ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1491,27 +1595,22 @@ section .vest .aside-vest .pvest button:hover {
     margin: 0;
     padding: 0;
   }
-  #grid-collections nav ul li {
+  #grid-collections nav .container-fluid div ul li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px;
   }
-  #grid-collections nav ul li a {
+  #grid-collections nav .container-fluid div ul li a {
     font-size: 10px;
     padding: 4px;
   }
-  #grid-collections nav ul li .logo {
-    width: 40px;
-    margin: 0;
-  }
-  #grid-collections nav ul li .btn {
+  #grid-collections nav .container-fluid div ul .btn {
     font-size: 10px;
     padding: 2px 6px;
     margin: 0;
+    color: rgb(228, 112, 193);
   }
   #grid-collections .contenedor-vestidos {
-    grid-area: cont;
     padding: 0 10px;
     align-items: center;
     justify-content: center;
@@ -1545,13 +1644,13 @@ section .vest .aside-vest .pvest button:hover {
 /* --------------marcas--------------- */
 /*-------------------------TABLET---------------------------*/
 @media screen and (max-width: 768px) {
-  .grid-marcas .vest div {
+  #grid-marcas .vest div {
     width: 70%;
   }
-  .grid-marcas .vest div .image-container {
+  #grid-marcas .vest div .image-container {
     width: 90%;
   }
-  .grid-marcas .vest .aside-vest {
+  #grid-marcas .vest .aside-vest {
     font-size: 15px;
     width: 60%;
     margin: 0;
@@ -1559,100 +1658,101 @@ section .vest .aside-vest .pvest button:hover {
 }
 /*-------------------------MOBILE L---------------------------*/
 @media screen and (max-width: 425px) {
-  .grid-marcas {
-    display: grid;
-    grid-template-areas: "header    header" "nav       nav" "section1  section1" "footer    footer";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1% 3% 80% 1fr;
+  #grid-marcas {
+    display: flex;
+    flex-direction: column;
   }
-  .grid-marcas header h3 {
+  #grid-marcas header h3 {
     font-size: 10px;
     padding: 10px;
   }
-  .grid-marcas nav {
+  #grid-marcas nav {
     grid-area: nav;
-    width: 100%;
     height: auto;
     margin: 0;
     padding: 0;
-    background-color: rgb(225, 210, 231);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    background-color: rgb(225, 210, 231);
   }
-  .grid-marcas nav ul {
+  #grid-marcas nav .container-fluid a .logo {
+    width: 40px;
+    border-radius: 10px;
+  }
+  #grid-marcas nav .container-fluid div ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 10px 0;
+    margin: 0;
     padding: 0;
   }
-  .grid-marcas nav ul li {
+  #grid-marcas nav .container-fluid div ul li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px;
+    gap: 50px;
   }
-  .grid-marcas nav ul li a {
+  #grid-marcas nav .container-fluid div ul li a {
     font-size: 10px;
     padding: 4px;
   }
-  .grid-marcas nav ul li .logo {
-    width: 40px;
-    margin: 0;
-  }
-  .grid-marcas nav ul li .btn {
+  #grid-marcas nav .container-fluid div ul .btn {
     font-size: 10px;
     padding: 2px 6px;
     margin: 0;
+    color: rgb(228, 112, 193);
   }
-  .grid-marcas section {
+  #grid-marcas section {
     grid-area: section1;
   }
-  .grid-marcas section .vest {
+  #grid-marcas section .p-pages {
+    margin-bottom: 0;
+    padding: 10px;
+  }
+  #grid-marcas section .vest {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     margin: 0;
   }
-  .grid-marcas section .vest .image-container {
+  #grid-marcas section .vest .image-container {
     width: 100%;
     margin-top: 30%;
   }
-  .grid-marcas section .vest .aside-vest {
+  #grid-marcas section .vest .aside-vest {
     margin: 0;
     width: 95%;
     position: relative;
   }
-  .grid-marcas footer {
+  #grid-marcas footer {
     grid-area: footer;
   }
-  .grid-marcas footer a {
+  #grid-marcas footer a {
     font-size: 15px;
   }
-  .grid-marcas footer .div-redes {
+  #grid-marcas footer .div-redes {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
   }
-  .grid-marcas footer .div-redes .redes {
+  #grid-marcas footer .div-redes .redes {
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  .grid-marcas footer .div-p {
+  #grid-marcas footer .div-p {
     font-size: 10px;
   }
 }
-/* --------------about - contact - devolucion--------------- */
+/* --------------about--------------- */
 /*-------------------------TABLET---------------------------*/
 @media screen and (max-width: 768px) {
   #grid-footer {
     display: grid;
     grid-template-areas: "header header  header" "nav    main    main" "footer footer  footer";
     grid-template-columns: 15% 42% 43%;
-    grid-template-rows: 2% 97.3% 1fr;
+    grid-template-rows: 2% 97.5% 1fr;
     overflow-y: visible;
   }
   #grid-footer header {
@@ -1707,11 +1807,12 @@ section .vest .aside-vest .pvest button:hover {
   }
   #grid-footer main {
     grid-area: main;
+    height: 85%;
   }
-  #grid-footer main section h1 {
+  #grid-footer main h1 {
     margin-top: 10px;
   }
-  #grid-footer main section .about {
+  #grid-footer main .about {
     margin-bottom: 0;
     font-size: 1.4em;
   }
@@ -1721,6 +1822,81 @@ section .vest .aside-vest .pvest button:hover {
   #grid-footer footer ul {
     padding: 0;
   }
+}
+/*-------------------------MOBILE L--------------------------*/
+@media screen and (max-width: 425px) {
+  #grid-footer {
+    display: grid;
+    grid-template-areas: "header header  " "nav nav   " "main main" " footer  footer";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1.5% 3% 70% 1fr;
+  }
+  #grid-footer header h3 {
+    font-size: 10px;
+  }
+  #grid-footer nav {
+    grid-area: nav;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 0;
+  }
+  #grid-footer nav .container-fluid a .logo {
+    width: 40px;
+    border-radius: 10px;
+  }
+  #grid-footer nav .container-fluid div ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #grid-footer nav .container-fluid div ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #grid-footer nav .container-fluid div ul li a {
+    font-size: 10px;
+    padding: 4px;
+  }
+  #grid-footer nav .container-fluid div ul .btn {
+    font-size: 10px;
+    padding: 2px 6px;
+    margin: 0;
+    color: rgb(228, 112, 193);
+  }
+  #grid-footer main h1 {
+    margin-top: 30%;
+    font-size: 1.5em;
+  }
+  #grid-footer main .about {
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+  }
+  #grid-footer footer a {
+    font-size: 15px;
+  }
+  #grid-footer footer .div-redes {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  #grid-footer footer .div-redes .redes {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #grid-footer footer .div-p {
+    font-size: 10px;
+  }
+}
+/* --------------contact--------------- */
+/*-------------------------TABLET---------------------------*/
+@media screen and (max-width: 768px) {
   #grid-footer-contact {
     display: grid;
     grid-template-areas: "header header" "nav    main" "footer footer";
@@ -1780,7 +1956,10 @@ section .vest .aside-vest .pvest button:hover {
     grid-area: main;
     padding: 0;
   }
-  #grid-footer-contact main .main-contact {
+  #grid-footer-contact main .container {
+    height: 100%;
+  }
+  #grid-footer-contact main .container .main-contact {
     margin: 0;
     margin-top: 20px;
     display: flex;
@@ -1788,12 +1967,12 @@ section .vest .aside-vest .pvest button:hover {
     align-items: center;
     justify-content: center;
   }
-  #grid-footer-contact main .main-contact .imgatito {
-    width: 30%;
-    height: 40%;
+  #grid-footer-contact main .container .main-contact .imgatito {
+    width: 100%;
+    height: auto;
     margin: 0;
   }
-  #grid-footer-contact main .main-contact .right2 {
+  #grid-footer-contact main .container .main-contact .right2 {
     padding: 10px;
   }
   #grid-footer-contact footer {
@@ -1805,79 +1984,9 @@ section .vest .aside-vest .pvest button:hover {
 }
 /*-------------------------MOBILE L--------------------------*/
 @media screen and (max-width: 425px) {
-  #grid-footer {
-    display: grid;
-    grid-template-areas: "header header  " "nav nav   " "main main" " footer  footer";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1% 4% 70% 1fr;
-  }
-  #grid-footer header h3 {
-    font-size: 10px;
-    padding: 10px;
-  }
-  #grid-footer nav {
-    grid-area: nav;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(225, 210, 231);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  #grid-footer nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin: 10px 0;
-    padding: 0;
-  }
-  #grid-footer nav ul li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-  }
-  #grid-footer nav ul li a {
-    font-size: 10px;
-    padding: 4px;
-  }
-  #grid-footer nav ul li .logo {
-    width: 40px;
-    margin: 0;
-  }
-  #grid-footer nav ul li .btn {
-    font-size: 10px;
-    padding: 2px 6px;
-    margin: 0;
-  }
-  #grid-footer main section .about {
-    font-size: 1.2em;
-    color: rgb(255, 255, 255);
-  }
-  #grid-footer footer a {
-    font-size: 15px;
-  }
-  #grid-footer footer .div-redes {
+  #grid-footer-contact {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
-  }
-  #grid-footer footer .div-redes .redes {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  #grid-footer footer .div-p {
-    font-size: 10px;
-  }
-  #grid-footer-contact {
-    display: grid;
-    grid-template-areas: "header header  " "nav nav   " "main main" " footer  footer";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1.3% 4% 78% 1fr;
   }
   #grid-footer-contact header h3 {
     font-size: 10px;
@@ -1885,46 +1994,47 @@ section .vest .aside-vest .pvest button:hover {
   }
   #grid-footer-contact nav {
     grid-area: nav;
-    width: 100%;
     height: auto;
     margin: 0;
     padding: 0;
-    background-color: rgb(225, 210, 231);
     position: sticky;
     top: 0;
-    z-index: 1000;
   }
-  #grid-footer-contact nav ul {
+  #grid-footer-contact nav .container-fluid a .logo {
+    width: 40px;
+    border-radius: 10px;
+  }
+  #grid-footer-contact nav .container-fluid div ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 10px 0;
+    margin: 0;
     padding: 0;
   }
-  #grid-footer-contact nav ul li {
+  #grid-footer-contact nav .container-fluid div ul li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px;
   }
-  #grid-footer-contact nav ul li a {
+  #grid-footer-contact nav .container-fluid div ul li a {
     font-size: 10px;
     padding: 4px;
   }
-  #grid-footer-contact nav ul li .logo {
-    width: 40px;
-    margin: 0;
-  }
-  #grid-footer-contact nav ul li .btn {
+  #grid-footer-contact nav .container-fluid div ul .btn {
     font-size: 10px;
     padding: 2px 6px;
     margin: 0;
+    color: rgb(228, 112, 193);
   }
   #grid-footer-contact main {
     grid-column: 1/3;
     width: 100%;
+    height: 100%;
+  }
+  #grid-footer-contact main .container {
+    height: 100%;
   }
   #grid-footer-contact main .container .main-contact {
     flex-direction: column;

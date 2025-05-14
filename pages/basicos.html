@@ -16,17 +16,40 @@
     <header>
         <h3>ENVÍOS GRATIS EN COMPRAS SUPERIORES A $170.000</h3>
     </header>
-    <nav>
+    <nav class="navbar navbar-expand-lg navbar-mobile-only">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img class="logo" src="../img/logo.gif" alt="Logo de la página"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContenido">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">Brand</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-sm clase-boton me-2" data-bs-toggle="modal" data-bs-target="#mi-modal-1">Ingresá</button>
+                        <button class="btn btn-sm" data-bs-toggle="modal" data-bs-target="#mi-modal-2">Registrate</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar-desktop-only">
         <ul class="d-flex justify-content-between align-items-center">
-          <li class="left d-flex">
-            <a href="../index.html"><img class="logo" src="../img/logo.gif" alt="Logo de la página"></a>
-            <a href="shop.html">SHOP</a>
-            <a href="aboutus.html">BRAND</a>
-          </li>
-          <li class="right d-flex align-items-center">
-            <button class="btn btn-md clase-boton" data-bs-toggle="modal" data-bs-target="#mi-modal-1">Ingresá</button>
-            <button class="btn btn-md" data-bs-toggle="modal" data-bs-target="#mi-modal-2">Registrate</button>
-          </li>
+            <li class="left d-flex">
+                <a href="../index.html"><img class="logo" src="../img/logo.gif" alt="Logo de la página"></a>
+                <a href="shop.html">SHOP</a>
+                <a href="aboutus.html">BRAND</a>
+            </li>
+            <li class="right d-flex align-items-center">
+                <button class="btn btn-md clase-boton" data-bs-toggle="modal" data-bs-target="#mi-modal-1">Ingresá</button>
+                <button class="btn btn-md" data-bs-toggle="modal" data-bs-target="#mi-modal-2">Registrate</button>
+            </li>
         </ul>
     </nav>
     
@@ -92,17 +115,17 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <a href="ta.html">
-                            <img src="../img/ta-1.webp" class="d-block w-100" alt="Top ta2">
+                            <img src="../img/ta-1.webp" class="d-block w-100" alt="TOP ALANA">
                         </a>
                     </div>
                     <div class="carousel-item">
                         <a href="td.html">
-                            <img src="../img/td-1.webp" class="d-block w-100" alt="Top tn">
+                            <img src="../img/td-1.webp" class="d-block w-100" alt="TOP DEMON (RIBB)">
                         </a>
                     </div>
                     <div class="carousel-item">
                         <a href="tm.html">
-                            <img src="../img/tm-1.webp" class="d-block w-100" alt="Top tr">
+                            <img src="../img/tm-1.webp" class="d-block w-100" alt="TOP MAREN">
                         </a>
                     </div>
                 </div>
@@ -115,34 +138,36 @@
         </div>
         <div class="basicos">
             <a href="ta.html" class="img-hover-wrap">
-                <img src="../img/ta-1.webp" class="img-normal" alt="Top ta2">
-                <img src="../img/ta-1cambio.png" class="img-hover" alt="Top ta2 cambio">
+                <img src="../img/ta-1.webp" class="img-normal" alt="TOP ALANA">
+                <img src="../img/ta-1cambio.png" class="img-hover" alt="TOP ALANA cambio">
+                <span class="hover-text">Ver más</span>
             </a>
             <a href="td.html" class="img-hover-wrap">
-                <img src="../img/td-1.webp" class="img-normal" alt="Top tn">
-                <img src="../img/td-1cambio.png" class="img-hover" alt="Top tn cambio">
+                <img src="../img/td-1.webp" class="img-normal" alt="TOP DEMON (RIBB)">
+                <img src="../img/td-1cambio.png" class="img-hover" alt="TOP DEMON (RIBB) cambio">
+                <span class="hover-text">Ver más</span>
             </a>
             <a href="tm.html" class="img-hover-wrap">
-                <img src="../img/tm-1.webp" class="img-normal" alt="Top tr">
-                <img src="../img/tm-1cambio.png" class="img-hover" alt="Top tr cambio">
+                <img src="../img/tm-1.webp" class="img-normal" alt="TOP MAREN">
+                <img src="../img/tm-1cambio.png" class="img-hover" alt="TOP MAREN cambio">
+                <span class="hover-text">Ver más</span>
             </a>
         </div>
     </section>
 
-      <footer>
+    <footer>
         <ul>
             <li class="footer"> <a href="aboutus.html">ABOUT US</a> </li>
             <li class="footer"> <a href="contact.html">CONTACT</a> </li>
         </ul>
-            <div class="div-redes">
-                <a href="https://www.instagram.com/" target="_blank"><img class="redes" src="../img/instagram.png" alt="Logo Instagram"></a>
-                <a href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des" target="_blank"><img class="redes" src="../img/tiktok.png" alt="Logo TikTok"></a>
-                <a href="https://x.com/?lang=es" target="_blank"><img class="redes" src="../img/twitter.png" alt="Logo X"></a>
-            
-            </div>
-            <div class="div-p">
-                <p>© 2025, Copyright Kosmos.</p> <p>Todos los derechos reservados.</p>
-            </div>
+        <div class="div-redes">
+            <a href="https://www.instagram.com/" target="_blank"><img class="redes" src="../img/instagram.png" alt="Logo Instagram"></a>
+            <a href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des" target="_blank"><img class="redes" src="../img/tiktok.png" alt="Logo TikTok"></a>
+            <a href="https://x.com/?lang=es" target="_blank"><img class="redes" src="../img/twitter.png" alt="Logo X"></a>
+        </div>
+        <div class="div-p">
+            <p>© 2025, Copyright Kosmos.</p> <p>Todos los derechos reservados.</p>  
+        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>

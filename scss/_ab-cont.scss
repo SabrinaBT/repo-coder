@@ -1,45 +1,72 @@
 /* ------ABOUT US------- */
 #grid-footer {
-    background-image: url(../img/fondo-brand.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-attachment: fixed;
+  background-image: url(../img/fondo-brand.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
     min-height: 100vh;
-    section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        min-height: 100vh;
-        h1 {
-          background-color: rgba(110, 44, 114, 0.8);
-          color: white;
-          padding: 20px 40px;
-          border-radius: 20px;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-          font-size: 2rem;
-          font-family: "Metamorphous", serif;
-        }
-        .img-about { 
-          width: 100%;
-        }
-        .about {
-          font-family: "Metamorphous", serif;
-          font-size: 1.5em;
-          text-align: center;
-          margin-top: 5%;
-          margin-bottom: 30px;
-          background-color: rgba(0, 0, 0, 0.5); 
-          padding: 20px; 
-          border-radius: 10px; 
-          color: white; 
-          h2{
-            color: #f98aff;
-          }
-        }
+
+    h1 {
+      background-color: rgba(110, 44, 114, 0.8);
+      color: white;
+      padding: 20px 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+      font-size: 2rem;
+      font-family: "Metamorphous", serif;
+      animation: zoomFadeRotate 1.6s ease-out forwards;
+      opacity: 0;
+      transform: scale(0.5) rotate(-5deg);
+      transition: all 0.4s ease;
+
+      &:hover {
+        background-color: rgba(255, 174, 255, 0.9);
+        color: #6e2c72;
+        transform: scale(1.05) rotate(1deg);
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.7);
+        cursor: default;
+      }
     }
+
+    @keyframes zoomFadeRotate {
+      0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-5deg);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+      }
+    }
+
+    .img-about {
+      width: 100%;
+    }
+
+    .about {
+      font-family: "Metamorphous", serif;
+      font-size: 1.5em;
+      text-align: center;
+      margin: 4%;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+
+      h2 {
+        color: #f98aff;
+      }
+    }
+  }
 }
 
 
